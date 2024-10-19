@@ -1,100 +1,247 @@
+/* General Styles */
 body {
     font-family: 'Noto Kufi Arabic', sans-serif;
+    line-height: 1.6;
+    color: #333;
 }
 
-/* Header */
-header {
-    background-color: #8597a3;
+h1, h2, h3, h4, h5 {
+    font-weight: 600;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+a {
+    color: #0056b3;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #004085;
+    text-decoration: underline;
+}
+
+section {
+    padding: 60px 0;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #2D435B
+    ;
+
+
+}
+
+.navbar-brand {
+    color: #fff;
+    font-weight: bold;
+    font-size: 50px;
+}
+
+.nav-link {
+    color: #FF9F7C;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-decoration: none;
+
+}
+
+.navbar.sticky-top {
+    box-shadow: 0 2px 5px rgb(0, 0, 0); /* Optional: Add shadow for better visibility */
+    transition: background-color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #BFCDCD;
+text-decoration: none;
 }
 
 /* Hero Section */
 #hero {
-    color: #2d435b;
+    color: white;
+    position: relative;
+}
+
+#hero h1 {
+    font-size: 4rem;
+    font-weight: 600;
+    color: #638181
+    ;
+    
+}
+
+#hero p {
+    font-size: 3rem;
+    color: #2D435B    ;
 }
 
 /* About Section */
 #about {
-    color: #2d435b;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    text-align: center;
+}
+
+#about h2 {
+    color: #FF9F7C;
+    font-size: 3rem;
+}
+
+#about p {
+    font-size: 1.2rem;
 }
 
 /* Break Section */
-.break-section {
-    color: #2d435b;
+#break {
+    background: #BFCDCD;
 }
 
-/* Project Statistics */
-#project-statistics .statistic {
-    background: rgba(255, 159, 124, 0.8);
-    border-radius: 10px;
-    padding: 20px;
-    margin: 10px 0;
-    position: relative;
+#break h2 {
+color: #FF9F7C;
+
 }
 
-.statistic .icon {
-    font-size: 30px;
-    position: absolute;
-    top: -20px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-/* Business Lines (Expertise) Section */
-#business-lines {
+/* Project Statistics Section */
+#statistics {
     background-color: #BFCDCD;
 }
 
-.expertise-card {
-    border-radius: 15px;
-    transition: transform 0.5s;
+.counter {
+    font-size: 2rem;
+    color: #333;
 }
 
-.expertise-card:hover {
-    transform: scale(1.05);
+/* Business Lines Section */
+#business-lines h2 {
+    color: #333;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
 }
 
-.circular-icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    background-color: #4b7094;
-    color: white;
-    margin: 0 auto 20px;
+.card {
+    transition: transform 0.3s;
+    border: solid 2px #638181;
+}
+
+.card:hover {
+    transform: scale(1.1);
 }
 
 /* Clients Section */
 #clients img {
     max-width: 100%;
     height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+#clients img:hover {
+    transform: scale(1.1);
 }
 
 /* Latest News Section */
-#latest-news {
-    color: #2d435b;
+#latest-news .card {
+    border: none;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+#latest-news .card:hover {
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+#latest-news .card-img-top {
+    border-radius: 0;
+}
+
+#latest-news h5 {
+    color: #333;
+    font-size: 1.25rem;
+    margin-top: 1rem;
+}
+
+#latest-news p {
+    font-size: 1rem;
 }
 
 /* Career Section */
-#career {
-    color: #2d435b;
+#career h2 {
+    color: #333;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
 }
 
-/* Footer */
+#career p {
+    font-size: 1.2rem;
+}
+
+#career .btn-primary {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+#career .btn-primary:hover {
+    background-color: #004085;
+    border-color: #004085;
+}
+
+/* Footer Styles */
 footer {
-    background-color: #4b7094;
-    color: white;
+    background-color: #333;
+    color: #fff;
 }
 
 footer h5 {
-    color: #ff9f7c;
+    color: #fff;
 }
 
 footer a {
-    color: #eab66A;
+    color: #bbb;
 }
 
 footer a:hover {
-    color: #FFF;
+    color: #fff;
+}
+
+footer .social-links a {
+    color: #fff;
+    margin-right: 15px;
+    font-size: 1.5rem;
+    transition: color 0.3s ease-in-out;
+}
+
+footer .social-links a:hover {
+    color: #0056b3;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    #hero h1 {
+        font-size: 3rem;
+    }
+
+    #hero p {
+        font-size: 1.2rem;
+    }
+    
+    #about h2 {
+        font-size: 2.5rem;
+    }
+
+    #about p {
+        font-size: 1rem;
+    }
+    
+    #business-lines h2 {
+        font-size: 2rem;
+    }
+    
+    #career h2 {
+        font-size: 2rem;
+    }
+
+    .counter {
+        font-size: 1.5rem;
+    }
 }
