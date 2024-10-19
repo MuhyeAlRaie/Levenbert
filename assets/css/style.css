@@ -1,0 +1,100 @@
+body {
+    font-family: 'Noto Kufi Arabic', sans-serif;
+}
+
+/* Header */
+header {
+    background-color: #8597a3;
+}
+
+/* Hero Section */
+#hero {
+    color: #2d435b;
+}
+
+/* About Section */
+#about {
+    color: #2d435b;
+}
+
+/* Break Section */
+.break-section {
+    color: #2d435b;
+}
+
+/* Project Statistics */
+#project-statistics .statistic {
+    background: rgba(255, 159, 124, 0.8);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px 0;
+    position: relative;
+}
+
+.statistic .icon {
+    font-size: 30px;
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Business Lines (Expertise) Section */
+#business-lines {
+    background-color: #BFCDCD;
+}
+
+.expertise-card {
+    border-radius: 15px;
+    transition: transform 0.5s;
+}
+
+.expertise-card:hover {
+    transform: scale(1.05);
+}
+
+.circular-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #4b7094;
+    color: white;
+    margin: 0 auto 20px;
+}
+
+/* Clients Section */
+#clients img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Latest News Section */
+#latest-news {
+    color: #2d435b;
+}
+
+/* Career Section */
+#career {
+    color: #2d435b;
+}
+
+/* Footer */
+footer {
+    background-color: #4b7094;
+    color: white;
+}
+
+footer h5 {
+    color: #ff9f7c;
+}
+
+footer a {
+    color: #eab66A;
+}
+
+footer a:hover {
+    color: #FFF;
+}
