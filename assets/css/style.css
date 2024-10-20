@@ -214,12 +214,16 @@ padding: 10px;
 
 /* Break Section */
 #break {
-    background: #BFCDCD;
+    background: #2D435B;
 }
 
 #break h2 {
 color: #FF9F7C;
 
+}
+#break p{
+
+    color: #BFCDCD;
 }
 
 /* Project Statistics Section */
@@ -238,10 +242,14 @@ color: #FF9F7C;
     font-size: 2.5rem;
     margin-bottom: 2rem;
 }
+#business-lines span{
+
+    color:#FF9F7C;
+}
 
 .card {
     transition: transform 0.3s;
-    border: solid 2px #638181;
+    border: solid 5px #638181;
 }
 
 .card:hover {
