@@ -29,16 +29,15 @@ section {
 
 /* Navbar Styles */
 .navbar {
-    background-color: #2D435B
-    ;
-
-
+    background-color: #2D435B;
+    padding: 15px 30px;
 }
 
-.navbar-brand {
-    color: #fff;
-    font-weight: bold;
-    font-size: 50px;
+.navbar-brand img {
+    max-height: 50px; /* Adjust this value depending on the size you want */
+    height: auto;
+    width: auto; /* Ensures the image scales proportionally */
+    display: block;
 }
 
 .nav-link {
@@ -46,30 +45,75 @@ section {
     padding-left: 15px;
     padding-right: 15px;
     text-decoration: none;
-
+    font-size: 1rem;
+    transition: color 0.3s ease-in-out;
 }
 
 .navbar.sticky-top {
-    box-shadow: 0 2px 5px rgb(0, 0, 0); /* Optional: Add shadow for better visibility */
-    transition: background-color 0.3s ease;
+    background-color: #2D435B;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 1.0s ease-in-out;
 }
 
 .nav-link:hover {
     color: #BFCDCD;
-text-decoration: none;
+    text-decoration: none;
+}
+
+/* Mobile Nav Responsiveness */
+@media (max-width: 768px) {
+    .navbar-brand img {
+        max-height: 40px; /* Reduce size for smaller screens */
+    }
+
+    .nav-link {
+        font-size: 0.9rem;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+/* Navbar Language Dropdown */
+.navbar-nav .nav-item .dropdown-toggle img {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.navbar-nav .nav-item .dropdown-toggle:hover img {
+    transform: scale(1.1);
+}
+
+.dropdown-menu {
+    background-color: #2D435B;
+    border: none;
+    padding: 0.5rem 1rem;
+}
+
+.dropdown-item {
+    color: #FF9F7C;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.dropdown-item:hover {
+    color: #BFCDCD;
+    background-color: transparent;
 }
 
 /* Hero Section */
 #hero {
     color: white;
     position: relative;
+padding: 10px;
 }
 
 #hero h1 {
     font-size: 4rem;
     font-weight: 600;
-    color: #638181
-    ;
+    color: #638181;
     
 }
 
@@ -80,18 +124,92 @@ text-decoration: none;
 
 /* About Section */
 #about {
-    background: rgba(0, 0, 0, 0.5);
+    position: relative; /* Enable absolute positioning of children */
     color: white;
-    text-align: center;
+    height: 100vh; /* Set the section height to full viewport height */
+    overflow: hidden; /* Hide any overflow */
+    align-items: center;
 }
 
-#about h2 {
+.background-video {
+    position: absolute; /* Position it behind the content */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover the entire section */
+    z-index: -1; /* Send it to the back */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+    z-index: 0; /* Ensure it’s above the video but below the content */
+}
+
+.container {
+    position: relative; /* Positioning context for child elements */
+    z-index: 1; /* Ensure the content is above the overlay */
+}
+
+/* Flex container for the row */
+.row {
+    display: flex;
+    justify-content: center; /* Center columns horizontally */
+    width: 100%; /* Ensure full width */
+}
+
+/* Column Styles */
+#aboutMenu {
+    text-align: left;
+}
+
+.about-item {
+    padding: 10px 0;
+    font-size: 1.5rem;
+    border-bottom: 2px solid #FF9F7C;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.about-item:hover {
     color: #FF9F7C;
-    font-size: 3rem;
+    
 }
 
-#about p {
+#aboutImage {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 0;
+}
+
+#aboutText {
+    text-align: left;
+}
+
+#aboutText p {
     font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+/* Flex styles for the columns */
+.col-md-4 {
+    display: flex; /* Use flexbox for column */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    height: 100%; /* Full height of the section */
+}
+.col-md-4 .im {
+    display: flex; /* Use flexbox for column */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    height: 100%; /* Full height of the section */
 }
 
 /* Break Section */
