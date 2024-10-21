@@ -26,20 +26,16 @@ document.addEventListener("DOMContentLoaded", function() {
     // Content Data
     const content = {
         item1: {
-            text: 'Our story began many years ago, when we decided to make a difference...',
+            text: 'LEVENBERT is a distinguished global network of professional consulting services firms, that delivers top-tier consulting services across various domains, including Consulting and Advisory, Learning and Development, Innovation and Ideation, and Technology Professional Consulting Solutions. Our aim is to support clients in making their businesses more agile, relevant, and growth-oriented. Leveraging our integrated expertise, we collaborate closely with local, regional, and global clients to accelerate value creation, mitigate risks, and provide consultancy that drives optimal results. Our mission is to offer scalable turnkey implementation solutions, underpinned by qualified expertise, well-proven methodologies, creativity, and innovation. We ensure our solutions are always aligned with local cultures and the aspirations of our clients toward excellence.  ',
             image: 'assets/img/map02.png'
         },
         item2: {
-            text: 'Our mission is to innovate and create immersive virtual experiences...',
-            image: 'path-to-mission-image.png'
+            text: 'Deliver transformative and impactful consulting services by building on the trust of our customers. Leveraging our expertise, proven methodologies, and culturally aligned approach, we are committed to driving excellence.',
+            image: 'assets/img/map02.png'
         },
         item3: {
-            text: 'Our vision is to lead the world into a new era of digital interaction...',
-            image: 'path-to-vision-image.png'
-        },
-        item4: {
-            text: 'Our mission is to innovate and create immersive virtual experiences...',
-            image: 'path-to-mission-image.png'
+            text: 'A new vision, we change the concept of consulting work to simulate reality through the inspiration of the future and make it in a scientific and methodological framework to be a reality to create future opportunities. A new path, in which we apply methodologies of excellence. In doing so, we transform the future of business and performance.',
+            image: 'assets/img/map02.png'
         }
     };
 
@@ -53,6 +49,23 @@ document.addEventListener("DOMContentLoaded", function() {
 
             // Update Image
             aboutImage.src = content[target].image;
+        });
+    });
+});
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    const cards = document.querySelectorAll('.card');
+    const businessLineSection = document.querySelector('.business-line-section');
+
+    cards.forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            const newBg = this.getAttribute('data-bg');
+            businessLineSection.style.backgroundImage = newBg; // Change background image on hover
+        });
+
+        card.addEventListener('mouseleave', function() {
+            businessLineSection.style.backgroundImage = "url('../assets/img/default-background.jpg')"; // Reset background on mouse leave
         });
     });
 });

@@ -151,7 +151,7 @@ padding: 10px;
     z-index: 0; /* Ensure it’s above the video but below the content */
 }
 
-.container {
+.container-fluid {
     position: relative; /* Positioning context for child elements */
     z-index: 1; /* Ensure the content is above the overlay */
 }
@@ -189,6 +189,7 @@ padding: 10px;
 
 #aboutText {
     text-align: left;
+    padding: 0;
 }
 
 #aboutText p {
@@ -236,59 +237,75 @@ color: #FF9F7C;
     color: #333;
 }
 
-/* Business Lines Section */
-#business-lines h2 {
-    color: #333;
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-}
-#business-lines span{
+/* Full-section background image */
 
-    color:#FF9F7C;
-}
-
-.card {
-    transition: transform 0.3s;
-    border: solid 5px #638181;
+.business-line-section {
+    background-image: url('../img/Break01BG.jpg'); /* Default background */
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0; /* Adjust padding as needed */
+    transition: background-image 0.3s ease; /* Smooth transition */
 }
 
-.card:hover {
-    transform: scale(1.1);
-}
-
-/* Clients Section */
-#clients img {
-    max-width: 100%;
-    height: auto;
-    transition: transform 0.3s ease-in-out;
-}
-
-#clients img:hover {
-    transform: scale(1.1);
-}
-
-/* Latest News Section */
-#latest-news .card {
+/* Styling the cards */
+.business-card {
+    background-color: #BFCDCD; /* Semi-transparent background */
     border: none;
-    transition: box-shadow 0.3s ease-in-out;
+    border-radius: 50%; /* Make the card circular */
+    height: 300px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for effect */
+    
 }
 
-#latest-news .card:hover {
-    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+/* Centering content inside the card */
+.business-card .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
 }
 
-#latest-news .card-img-top {
-    border-radius: 0;
+/* Hover effect: Change background and text color */
+.business-card:hover {
+    background-color: #2D435B; /* New background on hover */
+    color: #BFCDCD; /* Change text color to white */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3); /* Add hover shadow effect */
+    text-decoration: none;
 }
 
-#latest-news h5 {
-    color: #333;
-    font-size: 1.25rem;
-    margin-top: 1rem;
+.business-card:hover .card-title,
+.business-card:hover .card-text {
+    color: #BFCDCD; /* Text turns white on hover */
+    text-decoration: none;
 }
 
-#latest-news p {
-    font-size: 1rem;
+.business-card:hover h4 {
+    color: #FF9F7C;
+    text-decoration: none;
+}
+
+.business-card:hover h4 span {
+    color: #BFCDCD;
+    text-decoration: none;
+}
+
+
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .business-card {
+        height: 200px;
+        width: 200px;
+    }
 }
 
 /* Career Section */
@@ -314,8 +331,18 @@ color: #FF9F7C;
 
 /* Footer Styles */
 footer {
-    background-color: #333;
+    background-color: #2D435B;
     color: #fff;
+    height: 50vh;
+
+    padding-top: 50px;
+}
+footer img {
+
+    max-height: 50px; /* Adjust this value depending on the size you want */
+    height: auto;
+    width: auto; /* Ensures the image scales proportionally */
+    display: block;
 }
 
 footer h5 {
@@ -323,22 +350,29 @@ footer h5 {
 }
 
 footer a {
-    color: #bbb;
+    color: #FF9F7C;
 }
 
 footer a:hover {
-    color: #fff;
+    color: #BFCDCD;
+    text-decoration: none;
+}
+
+footer .social-links{
+
+    padding-top: 50px;
 }
 
 footer .social-links a {
-    color: #fff;
+    color: #BFCDCD;
     margin-right: 15px;
     font-size: 1.5rem;
     transition: color 0.3s ease-in-out;
+    margin-top: 20px;
 }
 
 footer .social-links a:hover {
-    color: #0056b3;
+    color: #FF9F7C;
 }
 
 /* Responsive Styles */
