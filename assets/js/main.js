@@ -55,17 +55,29 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 document.addEventListener("DOMContentLoaded", function() {
-    const cards = document.querySelectorAll('.card');
+    const cards = document.querySelectorAll('.business-card'); // Updated selector to match your cards
     const businessLineSection = document.querySelector('.business-line-section');
 
     cards.forEach(card => {
         card.addEventListener('mouseenter', function() {
             const newBg = this.getAttribute('data-bg');
             businessLineSection.style.backgroundImage = newBg; // Change background image on hover
+
+            // Add inactive class to all other cards
+            cards.forEach(otherCard => {
+                if (otherCard !== this) {
+                    otherCard.classList.add('inactive');
+                }
+            });
         });
 
         card.addEventListener('mouseleave', function() {
-            businessLineSection.style.backgroundImage = "url('../assets/img/default-background.jpg')"; // Reset background on mouse leave
+            businessLineSection.style.backgroundImage = "url('')"; // Reset background on mouse leave
+
+            // Remove inactive class from all cards
+            cards.forEach(otherCard => {
+                otherCard.classList.remove('inactive');
+            });
         });
     });
 });

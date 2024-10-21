@@ -238,13 +238,12 @@ color: #FF9F7C;
 }
 
 /* Full-section background image */
-
 .business-line-section {
-    background-image: url('../img/Break01BG.jpg'); /* Default background */
+    background-image: url(''); /* Default background */
     background-size: cover;
     background-position: center;
     padding: 100px 0; /* Adjust padding as needed */
-    transition: background-image 0.3s ease; /* Smooth transition */
+    transition: background-image 0.5s ease; /* Smooth transition */
 }
 
 /* Styling the cards */
@@ -259,7 +258,12 @@ color: #FF9F7C;
     align-items: center;
     transition: all 0.3s ease-in-out;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for effect */
-    
+}
+
+/* Opacity effect for non-hovered cards */
+.card.business-card.inactive {
+    opacity: 0.4; /* Set to your desired opacity */
+    transition: opacity 0.3s ease-in-out; /* Smooth transition */
 }
 
 /* Centering content inside the card */
@@ -295,8 +299,6 @@ color: #FF9F7C;
     color: #BFCDCD;
     text-decoration: none;
 }
-
-
 
 
 
