@@ -13,6 +13,41 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@300;400;600&display=swap">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+  
+    <style>
+
+.overlay-dots {
+      position: relative;
+      background-color: white;
+    }
+
+    .overlay-dots::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: radial-gradient(circle , rgba(0, 0, 0, 0.1) 1px, transparent 3px);
+      background-size: 20px 20px;
+      pointer-events: none; /* Ensures the dots don't affect interactivity */
+    }
+
+    .content-wrapper {
+      position: relative;
+      z-index: 1; /* Ensures the content stays above the overlay */
+      padding: 40px 20px;
+    }
+
+
+
+    </style>
 </head>
 <body>
 
@@ -72,198 +107,32 @@
 </section>
 
 
-<section id="about-us" class="about-us-section">
-    <video autoplay muted loop id="aboutVideo" class="about-video-background">
-        <source src="assets/videos/aboutbg.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-
-    <div class="container about-us-content">
-        <div class="row">
-            <div class="col-md-6 about-text">
-                <h2>LEVENBERT</h2>
-                <p>
-                     is a distinguished global network of professional consulting services firms, that delivers top-tier consulting
-                     services across various domains, including Consulting and Advisory, Learning and Development, Innovation and Ideation, and
-                      Technology Professional Consulting Solutions. Our aim is to support clients in making their businesses more agile, relevant,
-                       and growth-oriented. Leveraging our integrated expertise, we collaborate closely with local, regional, and global clients to
-                        accelerate value creation, mitigate risks, and provide consultancy that drives optimal results. Our mission is to offer scalable
-                         turnkey implementation solutions, underpinned by qualified expertise, well-proven methodologies, creativity, and innovation.
-                          We ensure our solutions are always aligned with local cultures and the aspirations of our clients toward excellence.
-                </p>
-            </div>
-            <div class="col-md-6 about-image">
-                <img src="assets\img\aboutus.png" alt="Levenbert Image" class="img-fluid">
-            </div>
-        </div>
-    </div>
-</section>
-
-
-<!-- Project Statistics Section -->
-<section id="statistics" class="text-center" style="background-color: #BFCDCD;">
+<section class="overlay-dots">
     <div class="container">
-        <h2>Project Statistics</h2>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="icon">
-                    <i class="bi bi-briefcase-fill" style="font-size: 2rem;"></i>
-                </div>
-                <h3 class="counter" data-count="120">0</h3>
-                <p>Projects Completed</p>
-            </div>
-            <div class="col-md-4">
-                <div class="icon">
-                    <i class="bi bi-person-fill" style="font-size: 2rem;"></i>
-                </div>
-                <h3 class="counter" data-count="80">0</h3>
-                <p>Clients Served</p>
-            </div>
-            <div class="col-md-4">
-                <div class="icon">
-                    <i class="bi bi-award-fill" style="font-size: 2rem;"></i>
-                </div>
-                <h3 class="counter" data-count="50">0</h3>
-                <p>Success Stories</p>
-            </div>
+      <div class="row align-items-center">
+        <!-- Left Column: Title and Paragraph -->
+        <div class="col-md-6 content-wrapper" style="background-color: #ffff;">
+          <h2 class="fw-bold" style="color: #2D435B; font-size: 40px;">LEVENBERT <span style="font-size: 5rem; color: #FF9F7C;">.</span></h2>
+          <p class="lead">LEVENBERT is a global consulting network that provides top-tier services in Consulting, Learning, Innovation, and Technology Solutions. We enhance client agility and growth through scalable, turnkey solutions tailored to local cultures, driving value creation and optimal results.
+        </p>
         </div>
-    </div>
-</section>
+        <!-- Right Column: GIF Image -->
+        <div class="col-md-6 text-center content-wrapper"  >
+         
+         <div class="col-md-2 d-flex" style="margin-left: auto;">
+            <img  src="assets/img/aboutusSC.png" alt="GIF Image" class="img-fluid">
+          </div>
+          <img src="assets/img/aboutus.png" alt="GIF Image" class="img-fluid">
 
-<section id="break-section" class="break-section">
-    <div class="container">
-        
-        <div class="row">
-            <div class="col-md-6 left-column">
-                <img src="assets/img/Break001.png" alt="Image Description" class="img-fluid">
-            </div>
-            <div class="col-md-6 right-column" style="text-align: center;justify-content: center;">
-                <h3>Future Transformation Architect Platform.</h3>
-                <p>
-            
-                </p>
-            </div>
-
+          </div>
+           
             
         </div>
+      </div>
     </div>
-</section>
-
-<!-- Business Lines Section -->
-<section id="businessLine" class="business-line-section">
-
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="section-title" style="text-align: center;margin-bottom: 50px;" data-aos="fade-up">
-                <h2 style="color: #2D435B;"> Expertise</h2>
-            </div>
-
-            <div class="col-md-4" style="margin-top: 20px;">
-                <a href="link-to-business-transformation.html" class="card business-card" data-bg="url('./assets/img/Buisness01.jpg')" data-aos="fade-right">
-                    <div class="card-body text-center">
-                        <h4 class="card-title">BUSINESS<br>
-                            <span style="color: #FF9F7C;">TRANSFORMATION</span>
-                        </h4>
-                        <p class="card-text">Expert advisory services tailored to your business needs.</p>
-                    </div>
-                </a>
-            </div>
-
-            <div class="col-md-4" style="margin-top: 20px;">
-                <a href="link-to-business-empowerment.html" class="card business-card" data-bg="url('./assets/img/Buisness02.jpg')" data-aos="fade-up">
-                    <div class="card-body text-center">
-                        <h4 class="card-title">BUSINESS<br>
-                            <span style="color: #FF9F7C;">EMPOWERMENT</span>
-                        </h4>
-                        <p class="card-text">Comprehensive learning and development programs.</p>
-                    </div>
-                </a>
-            </div>
-
-            <div class="col-md-4" style="margin-top: 20px;">
-                <a href="link-to-business-excellence.html" class="card business-card" data-bg="url('./assets/img/Buisness01.jpg')" data-aos="fade-left">
-                    <div class="card-body text-center">
-                        <h4 class="card-title">BUSINESS<br>
-                            <span style="color: #FF9F7C;">EXCELLENCE</span>
-                        </h4>
-                        <p class="card-text">Expert advisory services tailored to your business needs.</p>
-                    </div>
-                </a>
-            </div>
-
-            <div class="col-md-4" style="margin-top: 20px;">
-                <a href="link-to-business-agility.html" class="card business-card" data-bg="url('./assets/img/Buisness01.jpg')" data-aos="fade-right">
-                    <div class="card-body text-center">
-                        <h4 class="card-title">BUSINESS<br>
-                            <span style="color: #FF9F7C;">AGILITY</span>
-                        </h4>
-                        <p class="card-text">Expert advisory services tailored to your business needs.</p>
-                    </div>
-                </a>
-            </div>
-
-            <div class="col-md-4" style="margin-top: 20px;">
-                <a href="link-to-business-intelligence.html" class="card business-card" data-bg="url('./assets/img/Buisness01.jpg')" data-aos="fade-up">
-                    <div class="card-body text-center">
-                        <h4 class="card-title">BUSINESS<br>
-                            <span style="color: #FF9F7C;">INTELLIGENCE</span>
-                        </h4>
-                        <p class="card-text">Expert advisory services tailored to your business needs.</p>
-                    </div>
-                </a>
-            </div>
-
-            <div class="col-md-4" style="margin-top: 20px;">
-                <a href="link-to-business-immunity.html" class="card business-card" data-bg="url('./assets/img/Buisness01.jpg')" data-aos="fade-left">
-                    <div class="card-body text-center">
-                        <h4 class="card-title">BUSINESS<br>
-                            <span style="color: #FF9F7C;">IMMUNITY</span>
-                        </h4>
-                        <p class="card-text">Expert advisory services tailored to your business needs.</p>
-                    </div>
-                </a>
-            </div>
-
-            <div class="col-md-4" style="margin-top: 20px;">
-                <a href="link-to-business-sustainability.html" class="card business-card" data-bg="url('./assets/img/Buisness01.jpg')" data-aos="fade-up">
-                    <div class="card-body text-center">
-                        <h4 class="card-title">BUSINESS<br>
-                            <span style="color: #FF9F7C;">SUSTAINABILITY</span>
-                        </h4>
-                        <p class="card-text">Expert advisory services tailored to your business needs.</p>
-                    </div>
-                </a>
-            </div>
-
-            <div class="col-md-4" style="margin-top: 20px;">
-                <a href="link-to-business-efficiency.html" class="card business-card" data-bg="url('./assets/img/Buisness01.jpg')" data-aos="fade-up">
-                    <div class="card-body text-center">
-                        <h4 class="card-title">BUSINESS<br>
-                            <span style="color: #FF9F7C;">EFFICIENCY</span>
-                        </h4>
-                        <p class="card-text">Expert advisory services tailored to your business needs.</p>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </div>
-</section>
+  </section>
 
 
-<!-- Career Section -->
-<section id="career" style="background-color: #BFCDCD; color: #2D435B;">
-    <div class="container">
-        <h2>Careers at Levenbert</h2>
-        <div class="row">
-            <div class="col-md-6">
-                <p>Join our dynamic team and help us make a difference.</p>
-            </div>
-            <div class="col-md-6 text-end">
-                <a href="#" class="btn btn-primary">See Open Positions</a>
-            </div>
-        </div>
-    </div>
-</section>
 
 <!-- Footer -->
 <footer class=" text" style="background-color: #2D435B;">
@@ -312,5 +181,8 @@
         once: false, // Whether animation should happen only once
     });
 </script>
+
+
+
 </body>
 </html>

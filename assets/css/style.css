@@ -29,7 +29,7 @@ section {
 
 /* Navbar Styles */
 .navbar {
-    background-color: #2D435B;
+    background-color: #BFCDCD;
     padding: 15px 30px;
 }
 
@@ -41,7 +41,7 @@ section {
 }
 
 .nav-link {
-    color: #FF9F7C;
+    color: #ffffff;
     padding-left: 15px;
     padding-right: 15px;
     text-decoration: none;
@@ -56,7 +56,7 @@ section {
 }
 
 .nav-link:hover {
-    color: #BFCDCD;
+    color: #FF9F7C;
     text-decoration: none;
 }
 
@@ -122,234 +122,11 @@ padding: 10px;
     color: #2D435B    ;
 }
 
-/* About Us Section Styles */
-.about-us-section {
-    position: relative;
-    height: 100vh; /* Full screen height */
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-}
 
-.about-video-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1; /* Push the video behind the content */
-}
-
-.about-us-content {
-    z-index: 1;
-    padding: 20px;
-}
-
-.about-us-section h2 {
-    font-size: 3rem;
-    font-weight: 600;
-    color: #FF9F7C; /* Customize this color to match your theme */
-    margin-bottom: 20px;
-}
-
-.about-us-section p {
-    font-size: 1.2rem;
-    line-height: 1.8;
-    color: #ffff;
-}
-
-.about-image img {
-    max-width: 100%;
-    border-radius: 8px; /* Optional: Adds rounded corners to the image */
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-    .about-us-section {
-        height: auto;
-        padding: 40px 0;
-    }
-
-    .about-us-section h2 {
-        font-size: 2rem;
-    }
-
-    .about-us-section p {
-        font-size: 1rem;
-    }
-
-    .about-image img {
-        width: 100%;
-    }
-}
-
-
-/* Break Section Styles */
-.break-section {
-    background-color: #F0E5D8; /* Customize the background color */
-    padding: 60px 0; /* Padding for top and bottom */
-}
-
-
-
-.left-column {
-    margin-bottom: 20px; /* Space below the image column */
-}
-
-.left-column img {
-    max-width: 100%;
-    border-radius: 8px; /* Optional: Adds rounded corners to the image */
-}
-
-.right-column {
-    margin-top: 20px; /* Space above the right column */
-}
-
-.right-column h3 {
-    font-size: 1.8rem;
-    color: #2D435B; /* Customize this color */
-}
-
-.right-column p {
-    font-size: 1rem;
-    line-height: 1.5;
-    color: #333; /* Text color for paragraph */
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-    .break-section {
-        padding: 40px 0;
-    }
-
-    .marketing-sentence h2 {
-        font-size: 2rem;
-    }
-
-    .marketing-sentence p {
-        font-size: 1rem;
-    }
-
-    .right-column h3 {
-        font-size: 1.5rem;
-    }
-
-    .right-column p {
-        font-size: 0.9rem;
-    }
-}
-
-
-/* Project Statistics Section */
-#statistics {
-    background-color: #BFCDCD;
-}
-
-.counter {
-    font-size: 2rem;
-    color: #333;
-}
-
-/* Full-section background image */
-.business-line-section {
-    background-image: url(''); /* Default background */
-    background-size: cover;
-    background-position: center;
-    padding: 100px 0; /* Adjust padding as needed */
-    transition: background-image 0.5s ease; /* Smooth transition */
-}
-
-/* Styling the cards */
-.business-card {
-    background-color: #BFCDCD; /* Semi-transparent background */
-    border: none;
-    border-radius: 50%; /* Make the card circular */
-    height: 300px;
-    width: 300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: all 0.3s ease-in-out;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for effect */
-}
-
-/* Opacity effect for non-hovered cards */
-.card.business-card.inactive {
-    opacity: 0.4; /* Set to your desired opacity */
-    transition: opacity 0.3s ease-in-out; /* Smooth transition */
-}
-
-/* Centering content inside the card */
-.business-card .card-body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    text-decoration: none;
-}
-
-/* Hover effect: Change background and text color */
-.business-card:hover {
-    background-color: #2D435B; /* New background on hover */
-    color: #BFCDCD; /* Change text color to white */
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3); /* Add hover shadow effect */
-    text-decoration: none;
-}
-
-.business-card:hover .card-title,
-.business-card:hover .card-text {
-    color: #BFCDCD; /* Text turns white on hover */
-    text-decoration: none;
-}
-
-.business-card:hover h4 {
-    color: #FF9F7C;
-    text-decoration: none;
-}
-
-.business-card:hover h4 span {
-    color: #BFCDCD;
-    text-decoration: none;
-}
-
-
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .business-card {
-        height: 200px;
-        width: 200px;
-    }
-}
-
-/* Career Section */
-#career h2 {
-    color: #333;
-    font-size: 2.5rem;
-    margin-bottom: 1.5rem;
-}
-
-#career p {
-    font-size: 1.2rem;
-}
-
-#career .btn-primary {
-    background-color: #0056b3;
-    border-color: #0056b3;
-}
-
-#career .btn-primary:hover {
-    background-color: #004085;
-    border-color: #004085;
-}
 
 /* Footer Styles */
 footer {
-    background-color: #2D435B;
+    background-color: #BFCDCD;
     color: #fff;
     height: 50vh;
 
@@ -368,11 +145,11 @@ footer h5 {
 }
 
 footer a {
-    color: #FF9F7C;
+    color: #ffffff;
 }
 
 footer a:hover {
-    color: #BFCDCD;
+    color: #FF9F7C;
     text-decoration: none;
 }
 
@@ -423,3 +200,23 @@ footer .social-links a:hover {
         font-size: 1.5rem;
     }
 }
+
+
+.btn{
+    border: 3px solid;
+    border-color: #ef0007 ;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  font-size: 10px;
+  font-weight: bold;
+  background-color: #ffffff;
+  margin-left: 85%;
+  color:#ef0007
+  }
+  .btn:hover{
+  border-color: #3d3d3d;
+    background-color: #3d3d3d;
+    color: #ffffff;
+  }
+ 
