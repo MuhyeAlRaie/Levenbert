@@ -35,7 +35,7 @@
       width: 100%;
       height: 100%;
       background-image: radial-gradient(circle , rgba(0, 0, 0, 0.1) 1px, transparent 3px);
-      background-size: 20px 20px;
+      background-size: 35px 50px;
       pointer-events: none; /* Ensures the dots don't affect interactivity */
     }
 
@@ -44,6 +44,145 @@
       z-index: 1; /* Ensures the content stays above the overlay */
       padding: 40px 20px;
     }
+
+    /* Flip Card Container */
+    .flip-card {
+      background-color: transparent;
+      width: 350px; /* Updated size */
+      height: 350px; /* Updated size */
+      perspective: 1000px;
+      margin: 20px auto; /* Center the cards */
+    }
+
+    /* Flip animation */
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+    }
+
+    .flip-card:hover .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+
+    /* Front and Back Faces */
+    .flip-card-front, .flip-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 50%; /* Optional: round the corners */
+    }
+
+    .flip-card-front {
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      font-weight: bold;
+      color: #fff;
+      border: 2px solid #6c757d;
+    }
+
+    .flip-card-back {
+      background-color: #6c757d;
+      color: white;
+      transform: rotateY(180deg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      font-size: 16px;
+    }
+
+    /* Horizontal Timeline Design */
+    .timeline {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 40px;
+      position: relative;
+    }
+
+    .timeline-row {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      margin-bottom: 20px;
+      position: relative;
+    }
+
+    /* Badge for the timeline */
+    .timeline-badge {
+      width: 40px;
+      height: 40px;
+      background-color: #FF9F7C;
+      /* border:; */
+      border-radius: 50%;
+      position: relative;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 10px;
+    }
+
+    /* Line connecting badges */
+    .timeline-line {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background-color: #6c757d;
+      z-index: -1;
+    }
+
+    /* Clickable anchor tag covers the entire card */
+    .flip-card a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      text-decoration: none;
+      color: inherit; /* Inherits the color of the text */
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 992px) {
+      .flip-card {
+        width: 250px;
+        height: 250px;
+      }
+      .flip-card-back, .flip-card-front {
+        font-size: 14px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .timeline-row {
+        flex-direction: column;
+        align-items: center;
+      }
+      .timeline-line {
+        display: none;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .flip-card {
+        width: 300px;
+        height: 300px;
+      }
+      .flip-card-back, .flip-card-front {
+        font-size: 12px;
+      }
+    }
+  </style>
 
 
 
@@ -133,6 +272,190 @@
   </section>
 
 
+  <section class="overlay-dots">
+
+    <h2 class="text-center py-3">Expertise</h2>
+
+    <div class="container" style="background-color: #fff; z-index: 1; position: relative;
+    z-index: 1; /* Ensures the content stays above the overlay */
+    padding: 40px 20px;">
+        <!-- Horizontal Timeline -->
+        <div class="timeline">
+          <!-- First Row of Cards (3 Cards) -->
+          <div class="timeline-row">
+            <!-- Timeline Item 1 -->
+            <div class="timeline-item">
+              <div class="flip-card">
+                <a href="https://example.com/service1" target="_blank"> <!-- Clickable card -->
+                  <div class="flip-card-inner">
+                    <div class="flip-card-front" style="background-image: url('assets/img/Buisness01.jpg');">
+                      <h2 style="color: #BFCDCD;">Buisness<br> 
+                     <span style="color: #FF9F7C;">TRANSFORMATION</span>
+
+                    </h2>
+                    
+                    </div>
+                    <div class="flip-card-back">
+                      <p>LEVENBERT offers business transformation solutions across four pillars: strategic planning, cultural, operational, and digital transformation, to boost growth and efficiency.
+                    </p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="timeline-badge">&nbsp;</div>
+            </div>
+      
+            <!-- Timeline Item 2 -->
+            <div class="timeline-item">
+              <div class="flip-card">
+                <a href="https://example.com/service2" target="_blank">
+                  <div class="flip-card-inner">
+                    <div class="flip-card-front" style="background-image: url('assets/img/Buisness01.jpg');">
+                        <h2 style="color: #BFCDCD;">Buisness<br> 
+                          <span style="color: #FF9F7C;">EMPOWERMENT</span>
+                         </h2>
+                     </div>
+                    <div class="flip-card-back">
+                      <p>Description of service 2.</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="timeline-badge">&nbsp;</div>
+            </div>
+      
+            <!-- Timeline Item 3 -->
+            <div class="timeline-item">
+              <div class="flip-card">
+                <a href="https://example.com/service3" target="_blank">
+                  <div class="flip-card-inner">
+                    <div class="flip-card-front" style="background-image: url('assets/img/Buisness01.jpg');">
+                        <h2 style="color: #BFCDCD;">Buisness<br> 
+                          <span style="color: #FF9F7C;">Transformation</span>
+                         </h2>
+                     </div>
+                    <div class="flip-card-back">
+                      <p>Description of service 3.</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="timeline-badge">&nbsp;</div>
+            </div>
+      
+            <!-- Connecting Line (between badges) -->
+            <div class="timeline-line"></div>
+          </div>
+      
+          <!-- Second Row of Cards (3 Cards) -->
+          <div class="timeline-row">
+            <!-- Timeline Item 4 -->
+            <div class="timeline-item">
+              <div class="flip-card">
+                <a href="https://example.com/service4" target="_blank">
+                  <div class="flip-card-inner">
+                    <div class="flip-card-front" style="background-image: url('assets/img/Buisness01.jpg');">
+                        <h2 style="color: #BFCDCD;">Buisness<br> 
+                          <span style="color: #FF9F7C;">Transformation</span>
+                         </h2>
+                     </div>
+                    <div class="flip-card-back">
+                      <p>Description of service 4.</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="timeline-badge">&nbsp;</div>
+            </div>
+      
+            <!-- Timeline Item 5 -->
+            <div class="timeline-item">
+              <div class="flip-card">
+                <a href="https://example.com/service5" target="_blank">
+                  <div class="flip-card-inner">
+                    <div class="flip-card-front" style="background-image: url('assets/img/Buisness01.jpg');">
+                        <h2 style="color: #BFCDCD;">Buisness<br> 
+                          <span style="color: #FF9F7C;">Transformation</span>
+                         </h2>
+                     </div>
+                    <div class="flip-card-back">
+                      <p>Description of service 5.</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="timeline-badge">&nbsp;</div>
+            </div>
+      
+            <!-- Timeline Item 6 -->
+            <div class="timeline-item">
+              <div class="flip-card">
+                <a href="https://example.com/service6" target="_blank">
+                  <div class="flip-card-inner">
+                    <div class="flip-card-front" style="background-image: url('assets/img/Buisness01.jpg');">
+                        <h2 style="color: #BFCDCD;">Buisness<br> 
+                          <span style="color: #FF9F7C;">Transformation</span>
+                         </h2>
+                     </div>
+                    <div class="flip-card-back">
+                      <p>Description of service 6.</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="timeline-badge">&nbsp;</div>
+            </div>
+      
+            <!-- Connecting Line (between badges) -->
+            <div class="timeline-line"></div>
+          </div>
+      
+          <!-- Third Row of Cards (Remaining 2 Cards) -->
+          <div class="timeline-row">
+            <!-- Timeline Item 7 -->
+            <div class="timeline-item">
+              <div class="flip-card">
+                <a href="https://example.com/service7" target="_blank">
+                  <div class="flip-card-inner">
+                    <div class="flip-card-front" style="background-image: url('assets/img/Buisness01.jpg');">
+                        <h2 style="color: #BFCDCD;">Buisness<br> 
+                          <span style="color: #FF9F7C;">Transformation</span>
+                         </h2>
+                     </div>
+                    <div class="flip-card-back">
+                      <p>Description of service 7.</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="timeline-badge">&nbsp;</div>
+            </div>
+      
+            <!-- Timeline Item 8 -->
+            <div class="timeline-item">
+              <div class="flip-card">
+                <a href="https://example.com/service8" target="_blank">
+                  <div class="flip-card-inner">
+                    <div class="flip-card-front" style="background-image: url('assets/img/Buisness01.jpg');">
+                        <h2 style="color: #BFCDCD;">Buisness<br> 
+                          <span style="color: #FF9F7C;">Transformation</span>
+                         </h2>
+                     </div>
+                    <div class="flip-card-back">
+                      <p>Description of service 8.</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="timeline-badge">&nbsp;</div>
+            </div>
+      
+            <!-- Connecting Line (between badges) -->
+            <div class="timeline-line"></div>
+          </div>
+        </div>
+      </div>
+  </section>
 
 <!-- Footer -->
 <footer class=" text" style="background-color: #2D435B;">
