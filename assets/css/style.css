@@ -122,110 +122,126 @@ padding: 10px;
     color: #2D435B    ;
 }
 
-/* About Section */
-#about {
-    position: relative; /* Enable absolute positioning of children */
-    color: white;
-    height: 100vh; /* Set the section height to full viewport height */
-    overflow: hidden; /* Hide any overflow */
+/* About Us Section Styles */
+.about-us-section {
+    position: relative;
+    height: 100vh; /* Full screen height */
+    overflow: hidden;
+    display: flex;
     align-items: center;
+    justify-content: center;
+    color: white;
 }
 
-.background-video {
-    position: absolute; /* Position it behind the content */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Cover the entire section */
-    z-index: -1; /* Send it to the back */
-}
-
-.overlay {
+.about-video-background {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
-    z-index: 0; /* Ensure it’s above the video but below the content */
+    object-fit: cover;
+    z-index: -1; /* Push the video behind the content */
 }
 
-.container-fluid {
-    position: relative; /* Positioning context for child elements */
-    z-index: 1; /* Ensure the content is above the overlay */
+.about-us-content {
+    z-index: 1;
+    padding: 20px;
 }
 
-/* Flex container for the row */
-.row {
-    display: flex;
-    justify-content: center; /* Center columns horizontally */
-    width: 100%; /* Ensure full width */
+.about-us-section h2 {
+    font-size: 3rem;
+    font-weight: 600;
+    color: #FF9F7C; /* Customize this color to match your theme */
+    margin-bottom: 20px;
 }
 
-/* Column Styles */
-#aboutMenu {
-    text-align: left;
-}
-
-.about-item {
-    padding: 10px 0;
-    font-size: 1.5rem;
-    border-bottom: 2px solid #FF9F7C;
-    cursor: pointer;
-    transition: color 0.3s ease;
-}
-
-.about-item:hover {
-    color: #FF9F7C;
-    
-}
-
-#aboutImage {
-    width: 100%;
-    height: 100%;
-    margin-bottom: 0;
-}
-
-#aboutText {
-    text-align: left;
-    padding: 0;
-}
-
-#aboutText p {
+.about-us-section p {
     font-size: 1.2rem;
-    line-height: 1.6;
+    line-height: 1.8;
+    color: #ffff;
 }
 
-/* Flex styles for the columns */
-.col-md-4 {
-    display: flex; /* Use flexbox for column */
-    flex-direction: column; /* Stack items vertically */
-    justify-content: center; /* Center content vertically */
-    align-items: center; /* Center content horizontally */
-    height: 100%; /* Full height of the section */
-}
-.col-md-4 .im {
-    display: flex; /* Use flexbox for column */
-    flex-direction: column; /* Stack items vertically */
-    justify-content: center; /* Center content vertically */
-    align-items: center; /* Center content horizontally */
-    height: 100%; /* Full height of the section */
+.about-image img {
+    max-width: 100%;
+    border-radius: 8px; /* Optional: Adds rounded corners to the image */
 }
 
-/* Break Section */
-#break {
-    background: #2D435B;
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .about-us-section {
+        height: auto;
+        padding: 40px 0;
+    }
+
+    .about-us-section h2 {
+        font-size: 2rem;
+    }
+
+    .about-us-section p {
+        font-size: 1rem;
+    }
+
+    .about-image img {
+        width: 100%;
+    }
 }
 
-#break h2 {
-color: #FF9F7C;
 
+/* Break Section Styles */
+.break-section {
+    background-color: #F0E5D8; /* Customize the background color */
+    padding: 60px 0; /* Padding for top and bottom */
 }
-#break p{
 
-    color: #BFCDCD;
+
+
+.left-column {
+    margin-bottom: 20px; /* Space below the image column */
 }
+
+.left-column img {
+    max-width: 100%;
+    border-radius: 8px; /* Optional: Adds rounded corners to the image */
+}
+
+.right-column {
+    margin-top: 20px; /* Space above the right column */
+}
+
+.right-column h3 {
+    font-size: 1.8rem;
+    color: #2D435B; /* Customize this color */
+}
+
+.right-column p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #333; /* Text color for paragraph */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .break-section {
+        padding: 40px 0;
+    }
+
+    .marketing-sentence h2 {
+        font-size: 2rem;
+    }
+
+    .marketing-sentence p {
+        font-size: 1rem;
+    }
+
+    .right-column h3 {
+        font-size: 1.5rem;
+    }
+
+    .right-column p {
+        font-size: 0.9rem;
+    }
+}
+
 
 /* Project Statistics Section */
 #statistics {

@@ -18,40 +18,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-document.addEventListener("DOMContentLoaded", function() {
-    const aboutItems = document.querySelectorAll('.about-item');
-    const aboutText = document.getElementById('aboutText');
-    const aboutImage = document.getElementById('aboutImage');
 
-    // Content Data
-    const content = {
-        item1: {
-            text: 'LEVENBERT is a distinguished global network of professional consulting services firms, that delivers top-tier consulting services across various domains, including Consulting and Advisory, Learning and Development, Innovation and Ideation, and Technology Professional Consulting Solutions. Our aim is to support clients in making their businesses more agile, relevant, and growth-oriented. Leveraging our integrated expertise, we collaborate closely with local, regional, and global clients to accelerate value creation, mitigate risks, and provide consultancy that drives optimal results. Our mission is to offer scalable turnkey implementation solutions, underpinned by qualified expertise, well-proven methodologies, creativity, and innovation. We ensure our solutions are always aligned with local cultures and the aspirations of our clients toward excellence.  ',
-            image: 'assets/img/map02.png'
-        },
-        item2: {
-            text: 'Deliver transformative and impactful consulting services by building on the trust of our customers. Leveraging our expertise, proven methodologies, and culturally aligned approach, we are committed to driving excellence.',
-            image: 'assets/img/map02.png'
-        },
-        item3: {
-            text: 'A new vision, we change the concept of consulting work to simulate reality through the inspiration of the future and make it in a scientific and methodological framework to be a reality to create future opportunities. A new path, in which we apply methodologies of excellence. In doing so, we transform the future of business and performance.',
-            image: 'assets/img/map02.png'
-        }
-    };
-
-    // Event Listener for Items
-    aboutItems.forEach(item => {
-        item.addEventListener('click', function() {
-            const target = this.getAttribute('data-target');
-
-            // Update Text
-            aboutText.innerHTML = `<p>${content[target].text}</p>`;
-
-            // Update Image
-            aboutImage.src = content[target].image;
-        });
-    });
-});
 
 
 document.addEventListener("DOMContentLoaded", function() {
