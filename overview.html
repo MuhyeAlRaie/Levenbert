@@ -110,6 +110,92 @@
     line-height: 1.6;
     color: #555; /* Example color */
 }
+
+
+/* Time Line */
+
+.circle {
+  padding: 50px 50px;
+  border-radius: 50%;
+  background-color: #FF9F7C;
+  color: #fff;
+  max-height: 500px;
+  z-index: 2;
+}
+
+.how-it-works .col-2 {
+  align-self: stretch;
+  position: relative;
+}
+
+.how-it-works .col-2::after {
+  content: "";
+  position: absolute;
+  border-left: 3px solid #2D435B;
+  z-index: 1;
+}
+
+.how-it-works .col-2.bottom::after {
+  height: 50%;
+  left: 50%;
+  top: 50%;
+}
+
+.how-it-works .col-2.full::after {
+  height: 100%;
+  left: calc(50% - 3px);
+}
+
+.how-it-works .col-2.top::after {
+  height: 50%;
+  left: 50%;
+  top: 0;
+}
+
+.timeline div {
+  padding: 0;
+  height: 40px;
+}
+
+.timeline hr {
+  border-top: 3px solid #2D435B;
+  margin: 0;
+  top: 17px;
+  position: relative;
+}
+
+.timeline .col-2 {
+  display: flex;
+  overflow: hidden;
+}
+
+.timeline .corner {
+  border: 3px solid #2D435B;
+  width: 100%;
+  position: relative;
+  border-radius: 15px;
+}
+
+.timeline .top-right {
+  left: 50%;
+  top: -50%;
+}
+
+.timeline .left-bottom {
+  left: -50%;
+  top: calc(50% - 3px);
+}
+
+.timeline .top-left {
+  left: -50%;
+  top: -50%;
+}
+
+.timeline .right-bottom {
+  left: 50%;
+  top: calc(50% - 3px);
+}
+
     </style>
 
 </head>
@@ -399,6 +485,350 @@
         </div>
     </div>
 </section>
+
+
+
+<div class="">
+    <div class="container">
+        <h2 class="text-center mb-4" style="color: #638181;">LEVENBERT TIMELINE</h2>
+      <!-- Repeat sections from 2004 to 2024 -->
+      <!-- Example section for year 2004 -->
+      
+      <div class="row align-items-center how-it-works d-flex">
+        <div class="col-2 text-center bottom d-inline-flex justify-content-center align-items-center position-relative">
+          <div class="circle fw-bold" style="background-color: lightgray;">2004</div>
+        </div>
+        <div class="col-6">
+          <h5>FOUNDATION</h5>
+          <p>The launch of the company marks the beginning of an exciting journey, introducing innovative products and services to the market. It represents a culmination of hard work, vision, and commitment to excellence, aiming to make a significant impact in the industry and provide exceptional value to customers.
+        </p>
+        </div>
+      </div>
+  
+      <!-- Path between 2004 and 2005 -->
+      <div class="row timeline">
+        <div class="col-2">
+          <div class="corner top-right"></div>
+        </div>
+        <div class="col-8">
+          <hr />
+        </div>
+        <div class="col-2">
+          <div class="corner left-bottom"></div>
+        </div>
+      </div>
+      
+      <!-- Example section for year 2005 -->
+      
+      <div class="row align-items-center justify-content-end how-it-works d-flex">
+        <div class="col-6 text-start">
+          <h5>INITIATION</h5>
+          <p>The execution of the largest development project in the Middle East, North Africa, and Saudi Arabia aims to transform the region with state-of-the-art infrastructure, economic growth, and enhanced quality of life. This ambitious initiative will set new standards for development and progress in the area.
+        </p>
+        </div>
+        <div class="col-2 text-center full d-inline-flex justify-content-center align-items-center position-relative">
+          <div class="circle fw-bold">2005</div>
+        </div>
+      </div>
+  
+      <!-- Path between 2005 and 2006 -->
+      <div class="row timeline">
+        <div class="col-2">
+          <div class="corner right-bottom"></div>
+        </div>
+        <div class="col-8">
+          <hr />
+        </div>
+        <div class="col-2">
+          <div class="corner top-left"></div>
+        </div>
+      </div>
+  
+      <!-- Continue with other years -->
+
+      
+      <div class="row align-items-center how-it-works d-flex">
+        <div class="col-2 text-center bottom d-inline-flex justify-content-center align-items-center position-relative">
+          <div class="circle fw-bold" style="background-color: #8597A3;">2008</div>
+        </div>
+        <div class="col-6">
+          <h5>EXPANSİON</h5>
+          <p>The company’s expansion into the GCC countries, including Saudi Arabia, the United Arab Emirates, Kuwait, and Oman, marks a significant milestone in its growth strategy. This move aims to strengthen its regional presence, enhance market reach, and provide tailored solutions to meet the diverse needs of these dynamic markets.
+        </p>
+        </div>
+      </div>
+  
+      <!-- Path between 2005 and 2006 -->
+      <div class="row timeline">
+        <div class="col-2">
+          <div class="corner top-right"></div>
+        </div>
+        <div class="col-8">
+          <hr />
+        </div>
+        <div class="col-2">
+          <div class="corner left-bottom"></div>
+        </div>
+      </div>
+      
+      <!-- Example section for year 2005 -->
+      
+      <div class="row align-items-center justify-content-end how-it-works d-flex">
+        <div class="col-6 text-start">
+          <h5>COLLABORATİON</h5>
+          <p>The launch of collaboration and partnerships with regional and global universities and research institutes signifies a strategic initiative to drive innovation and knowledge exchange. This effort aims to enhance research capabilities, foster academic-industry linkages, and contribute to groundbreaking advancements across various fields.
+        </p>
+        </div>
+        <div class="col-2 text-center full d-inline-flex justify-content-center align-items-center position-relative">
+          <div class="circle fw-bold">2010</div>
+        </div>
+      </div>
+  
+      <!-- Path between 2005 and 2006 -->
+      <div class="row timeline">
+        <div class="col-2">
+          <div class="corner right-bottom"></div>
+        </div>
+        <div class="col-8">
+          <hr />
+        </div>
+        <div class="col-2">
+          <div class="corner top-left"></div>
+        </div>
+      </div>
+
+      <!-- Example section for year 2004 -->
+      
+      <div class="row align-items-center how-it-works d-flex">
+        <div class="col-2 text-center bottom d-inline-flex justify-content-center align-items-center position-relative">
+          <div class="circle fw-bold" style="background-color: #BFCDCD;">2013</div>
+        </div>
+        <div class="col-6">
+          <h5>COMPETENCE</h5>
+          <p>The company has received global awards for its projects, highlighting its commitment to excellence and innovation. These accolades recognize the company's outstanding contributions to the industry and its success in delivering high-quality, impactful projects on an international scale.
+        </p>
+        </div>
+      </div>
+  
+      <!-- Path between 2004 and 2005 -->
+      <div class="row timeline">
+        <div class="col-2">
+          <div class="corner top-right"></div>
+        </div>
+        <div class="col-8">
+          <hr />
+        </div>
+        <div class="col-2">
+          <div class="corner left-bottom"></div>
+        </div>
+      </div>
+      
+      <!-- Example section for year 2005 -->
+      
+      <div class="row align-items-center justify-content-end how-it-works d-flex">
+        <div class="col-6 text-start">
+          <h5>CONSTANCY</h5>
+          <p>The execution of the largest development project in the aviation sector in Saudi Arabia represents a groundbreaking initiative aimed at transforming the country's aviation infrastructure. This project is set to elevate the industry standards, enhance operational efficiencies, and contribute significantly to the nation's economic growth and global aviation standing.
+        </p>
+        </div>
+        <div class="col-2 text-center full d-inline-flex justify-content-center align-items-center position-relative">
+          <div class="circle fw-bold" style="background-color: #8597A3;">2014</div>
+        </div>
+      </div>
+  
+      <!-- Path between 2005 and 2006 -->
+      <div class="row timeline">
+        <div class="col-2">
+          <div class="corner right-bottom"></div>
+        </div>
+        <div class="col-8">
+          <hr />
+        </div>
+        <div class="col-2">
+          <div class="corner top-left"></div>
+        </div>
+      </div>
+
+
+      <!-- Example section for year 2004 -->
+      
+      <div class="row align-items-center how-it-works d-flex">
+        <div class="col-2 text-center bottom d-inline-flex justify-content-center align-items-center position-relative">
+          <div class="circle fw-bold">2015</div>
+        </div>
+        <div class="col-6">
+          <h5>SUSTAİNABLE</h5>
+          <p>The launch and implementation of advanced and executive leadership programs in the United Arab Emirates aims to cultivate top-tier leadership skills and drive organizational excellence. These programs are designed to equip leaders with the necessary tools and insights to navigate complex business landscapes and foster sustainable growth.
+        </p>
+        </div>
+      </div>
+  
+      <!-- Path between 2004 and 2005 -->
+      <div class="row timeline">
+        <div class="col-2">
+          <div class="corner top-right"></div>
+        </div>
+        <div class="col-8">
+          <hr />
+        </div>
+        <div class="col-2">
+          <div class="corner left-bottom"></div>
+        </div>
+      </div>
+      
+      <!-- Example section for year 2005 -->
+      
+      <div class="row align-items-center justify-content-end how-it-works d-flex">
+        <div class="col-6 text-start">
+          <h5>GROWTH</h5>
+          <p>The launch of collaboration and partnerships with regional and global management institutes aims to enhance our leadership and management capabilities. This initiative fosters the exchange of knowledge and best practices, contributing to the development of innovative strategies and strengthening our organizational performance on a global scale.
+        </p>
+        </div>
+        <div class="col-2 text-center full d-inline-flex justify-content-center align-items-center position-relative">
+          <div class="circle fw-bold" style="background-color: #8597A3;">2017</div>
+        </div>
+      </div>
+  
+      <!-- Path between 2005 and 2006 -->
+      <div class="row timeline">
+        <div class="col-2">
+          <div class="corner right-bottom"></div>
+        </div>
+        <div class="col-8">
+          <hr />
+        </div>
+        <div class="col-2">
+          <div class="corner top-left"></div>
+        </div>
+      </div>
+
+
+      <!-- Example section for year 2004 -->
+      
+      <div class="row align-items-center how-it-works d-flex">
+        <div class="col-2 text-center bottom d-inline-flex justify-content-center align-items-center position-relative">
+          <div class="circle fw-bold">2018</div>
+        </div>
+        <div class="col-6">
+          <h5>DOMINANCE</h5>
+          <p>The implementation of the Vision 2040 project in Oman is a transformative initiative aimed at shaping the nation's future. This ambitious project focuses on sustainable development, economic diversification, and societal progress, setting a clear roadmap for Oman's growth and prosperity over the next two decades.
+        </p>
+        </div>
+      </div>
+  
+      <!-- Path between 2004 and 2005 -->
+      <div class="row timeline">
+        <div class="col-2">
+          <div class="corner top-right"></div>
+        </div>
+        <div class="col-8">
+          <hr />
+        </div>
+        <div class="col-2">
+          <div class="corner left-bottom"></div>
+        </div>
+      </div>
+      
+      <!-- Example section for year 2005 -->
+      
+      <div class="row align-items-center justify-content-end how-it-works d-flex">
+        <div class="col-6 text-start">
+          <h5>Excellence</h5>
+          <p>The establishment and launch of the company's specialized institutions and centers in the Middle East, North Africa, and Singapore mark a significant expansion of our global footprint. These centers aim to drive innovation, enhance regional capabilities, and foster international collaboration, reinforcing our commitment to excellence and growth in key markets.
+        </p>
+        </div>
+        <div class="col-2 text-center full d-inline-flex justify-content-center align-items-center position-relative">
+          <div class="circle fw-bold">2019</div>
+        </div>
+      </div>
+  
+      <!-- Path between 2005 and 2006 -->
+      <div class="row timeline">
+        <div class="col-2">
+          <div class="corner right-bottom"></div>
+        </div>
+        <div class="col-8">
+          <hr />
+        </div>
+        <div class="col-2">
+          <div class="corner top-left"></div>
+        </div>
+      </div>
+
+
+      <!-- Example section for year 2004 -->
+      
+      <div class="row align-items-center how-it-works d-flex">
+        <div class="col-2 text-center bottom d-inline-flex justify-content-center align-items-center position-relative">
+          <div class="circle fw-bold" style="background-color: #638181;">2020</div>
+        </div>
+        <div class="col-6">
+          <h5>REALIZATION</h5>
+          <p>The launch of the electronic development, awareness, and specialized research project in response to the COVID-19 pandemic aims to leverage technology for effective communication, education, and innovative research. This initiative is designed to address the challenges posed by the pandemic, enhancing public awareness and contributing to vital scientific advancements during these unprecedented times.
+        </p>
+        </div>
+      </div>
+  
+      <!-- Path between 2004 and 2005 -->
+      <div class="row timeline">
+        <div class="col-2">
+          <div class="corner top-right"></div>
+        </div>
+        <div class="col-8">
+          <hr />
+        </div>
+        <div class="col-2">
+          <div class="corner left-bottom"></div>
+        </div>
+      </div>
+      
+      <!-- Example section for year 2005 -->
+      
+      <div class="row align-items-center justify-content-end how-it-works d-flex">
+        <div class="col-6 text-start">
+          <h5>RESILIENCE</h5>
+          <p>The expansion of the company's operations in Saudi Arabia, alongside a strategic repositioning for global outreach, aims to maximize investment opportunities and seize opportunities aligned with the Kingdom's Vision 2030. This initiative underscores our commitment to leveraging the dynamic market of Saudi Arabia while enhancing our global presence and influence.
+        </p>
+        </div>
+        <div class="col-2 text-center full d-inline-flex justify-content-center align-items-center position-relative">
+          <div class="circle fw-bold" style="background-color: #8597A3;">2021</div>
+        </div>
+      </div>
+  
+      <!-- Path between 2005 and 2006 -->
+      <div class="row timeline">
+        <div class="col-2">
+          <div class="corner right-bottom"></div>
+        </div>
+        <div class="col-8">
+          <hr />
+        </div>
+        <div class="col-2">
+          <div class="corner top-left"></div>
+        </div>
+      </div>
+
+
+      <!-- Example section for year 2004 -->
+      
+      <div class="row align-items-center how-it-works d-flex">
+        <div class="col-2 text-center bottom d-inline-flex justify-content-center align-items-center position-relative">
+          <div class="circle fw-bold">2024</div>
+        </div>
+        <div class="col-6">
+          <h5>INITIATIVE</h5>
+          <p>The launch of a system of globally accredited initiatives and specialized programs, combined with geographical expansion and partnership building, aims to drive innovation and excellence. This initiative enhances our ability to deliver high-quality solutions, foster international collaboration, and extend our reach into new markets.
+        </p>
+        </div>
+      </div>
+  
+     
+  
+    
+  
+    </div>
+  </div>
+
 
 
 <!-- Footer -->
