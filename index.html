@@ -90,7 +90,7 @@
     }
 
     .flip-card-back {
-      background-color: #6c757d;
+      background-color: #2D435B;
       color: white;
       transform: rotateY(180deg);
       display: flex;
@@ -182,6 +182,63 @@
         font-size: 12px;
       }
     }
+
+ /* Break Section Styles */
+ .break-section {
+    background-image: url('./assets/img/Break01BG.jpg'); /* Add your background image path here */
+    background-size: cover; /* Cover the entire section */
+        background-position: center; /* Center the background image */
+        background-repeat: no-repeat;
+        background-color: #638181;
+        padding: 2rem 1rem; /* Padding for better spacing */
+        height: 50vh;
+        width: auto;
+        text-align: center;
+        justify-items: center;
+    }
+
+    .container {
+        max-width: 1200px; /* Limit container width for larger screens */
+        margin: 0 auto; /* Center container */
+        justify-items: center;
+    }
+
+    .row {
+        display: flex;
+        flex-wrap: wrap; /* Allow wrapping of columns */
+        justify-content: center; /* Center content horizontally */
+    }
+
+    .col {
+        flex: 1 1 100%; /* Full width on small screens */
+        text-align: start; /* Align text to start */
+        padding: 0.5rem; /* Padding for spacing */
+        margin: 100px;
+    }
+
+    @media (min-width: 768px) {
+        .col {
+            flex: 1 1 45%; /* 50% width on medium screens */
+        }
+    }
+
+    @media (min-width: 992px) {
+        .col {
+            flex: 1 1 33%; /* 33.33% width on large screens */
+        }
+    }
+
+    h2 {
+        font-size: 1.1rem; /* Responsive font size */
+        margin-bottom: 1rem; /* Space below heading */
+    }
+
+    p {
+        font-size: 1rem; /* Responsive font size */
+        line-height: 1.5; /* Better line spacing */
+    }
+
+
   </style>
 
 
@@ -240,8 +297,8 @@
         Your browser does not support the video tag.
     </video>
     <div class="container text" style="position: relative; z-index: 1; color: white; text-align: left; display: flex; flex-direction: column; justify-content: center; height: 100%;">
-        <h1><span style="font-size: 7rem;color: #FF9F7C;">.</span> منصة المستقبلــــــ</h1>
-        <p>Fuater Platform_____<span style="font-size: 7rem;color: #FF9F7C;">.</span></p>
+        <h1 ><span style="font-size: 7rem;color: #FF9F7C;">.</span> منصة المستقبلــــــ</h1>
+        <p style="font-weight: bold;">Fuater Platform_____<span style="font-size: 7rem;color: #FF9F7C;">.</span></p>
     </div>
 </section>
 
@@ -272,9 +329,22 @@
   </section>
 
 
+<!-- Break Section  -->
+<section class="break-section" style="background-color: #638181;">
+<div class="container" >
+    <div class="row">
+        <div class="col text-start"> 
+            <h2 style="font-size: 4rem;color: #BFCDCD;">Future Transformation Architect Platform.</h2>
+            <!-- <p>Your text goes here. This section is responsive and will adjust based on screen size.</p> -->
+        </div>
+    </div>
+</div>
+</section>
+
+
   <section class="overlay-dots">
 
-    <h2 class="text-center py-3">Expertise</h2>
+    <h2 class="text-center py-3" style="font-size: 3rem;">Expertise</h2>
 
     <div class="container" style="background-color: #fff; z-index: 1; position: relative;
     z-index: 1; /* Ensures the content stays above the overlay */
@@ -289,7 +359,7 @@
                 <a href="https://example.com/service1" target="_blank"> <!-- Clickable card -->
                   <div class="flip-card-inner">
                     <div class="flip-card-front" style="background-image: url('assets/img/Buisness01.jpg');">
-                      <h2 style="color: #BFCDCD;">Buisness<br> 
+                      <h2 style="color: #BFCDCD; background-color: #0000007e; ">Buisness<br> 
                      <span style="color: #FF9F7C;">TRANSFORMATION</span>
 
                     </h2>
@@ -302,7 +372,7 @@
                   </div>
                 </a>
               </div>
-              <div class="timeline-badge">&nbsp;</div>
+              <!-- <div class="timeline-badge">&nbsp;</div> -->
             </div>
       
             <!-- Timeline Item 2 -->
@@ -310,18 +380,19 @@
               <div class="flip-card">
                 <a href="https://example.com/service2" target="_blank">
                   <div class="flip-card-inner">
-                    <div class="flip-card-front" style="background-image: url('assets/img/Buisness01.jpg');">
-                        <h2 style="color: #BFCDCD;">Buisness<br> 
+                    <div class="flip-card-front" style="background-image: url('assets/img/Buisness02.jpg');">
+                        <h2 style="color: #BFCDCD; background-color: #0000007e; " >Buisness<br> 
                           <span style="color: #FF9F7C;">EMPOWERMENT</span>
                          </h2>
                      </div>
                     <div class="flip-card-back">
-                      <p>Description of service 2.</p>
+                      <p>
+                        We empower businesses with tailored training and HR consulting to enhance efficiency, foster growth, and develop talent. Partner with us to transform your workforce and achieve your goals.</p>
                     </div>
                   </div>
                 </a>
               </div>
-              <div class="timeline-badge">&nbsp;</div>
+              <!-- <div class="timeline-badge">&nbsp;</div> -->
             </div>
       
             <!-- Timeline Item 3 -->
@@ -329,18 +400,18 @@
               <div class="flip-card">
                 <a href="https://example.com/service3" target="_blank">
                   <div class="flip-card-inner">
-                    <div class="flip-card-front" style="background-image: url('assets/img/Buisness01.jpg');">
-                        <h2 style="color: #BFCDCD;">Buisness<br> 
-                          <span style="color: #FF9F7C;">Transformation</span>
+                    <div class="flip-card-front" style="background-image: url('assets/img/Buisness03.jpg');">
+                        <h2 style="color: #BFCDCD;background-color: #0000007e; ">Buisness<br> 
+                          <span style="color: #FF9F7C;">EXCELLENCE</span>
                          </h2>
                      </div>
                     <div class="flip-card-back">
-                      <p>Description of service 3.</p>
+                      <p>Business Excellence Solutions offers advisory services in process optimization and strategic planning to help companies achieve exceptional performance and sustainable growth.</p>
                     </div>
                   </div>
                 </a>
               </div>
-              <div class="timeline-badge">&nbsp;</div>
+              <!-- <div class="timeline-badge">&nbsp;</div> -->
             </div>
       
             <!-- Connecting Line (between badges) -->
@@ -354,18 +425,19 @@
               <div class="flip-card">
                 <a href="https://example.com/service4" target="_blank">
                   <div class="flip-card-inner">
-                    <div class="flip-card-front" style="background-image: url('assets/img/Buisness01.jpg');">
-                        <h2 style="color: #BFCDCD;">Buisness<br> 
-                          <span style="color: #FF9F7C;">Transformation</span>
+                    <div class="flip-card-front" style="background-image: url('assets/img/Buisness04.jpg');">
+                        <h2 style="color: #BFCDCD;background-color: #0000007e; ">Buisness<br> 
+                          <span style="color: #FF9F7C;">AGILITY</span>
                          </h2>
                      </div>
                     <div class="flip-card-back">
-                      <p>Description of service 4.</p>
+                      <p>
+                        Business Agility Consulting Solutions helps organizations adapt to market changes through agile methodologies, streamlining processes, and fostering innovation for sustainable growth.</p>
                     </div>
                   </div>
                 </a>
               </div>
-              <div class="timeline-badge">&nbsp;</div>
+              <!-- <div class="timeline-badge">&nbsp;</div> -->
             </div>
       
             <!-- Timeline Item 5 -->
@@ -373,18 +445,18 @@
               <div class="flip-card">
                 <a href="https://example.com/service5" target="_blank">
                   <div class="flip-card-inner">
-                    <div class="flip-card-front" style="background-image: url('assets/img/Buisness01.jpg');">
-                        <h2 style="color: #BFCDCD;">Buisness<br> 
-                          <span style="color: #FF9F7C;">Transformation</span>
+                    <div class="flip-card-front" style="background-image: url('assets/img/Buisness05.jpg');">
+                        <h2 style="color: #BFCDCD; background-color: #0000007e; ">Buisness<br> 
+                          <span style="color: #FF9F7C;">INTELLIGENCE</span>
                          </h2>
                      </div>
                     <div class="flip-card-back">
-                      <p>Description of service 5.</p>
+                      <p>Business Intelligence consulting empowers organizations to make data-driven decisions by turning raw data into actionable insights, enhancing efficiency, and driving competitive advantage.</p>
                     </div>
                   </div>
                 </a>
               </div>
-              <div class="timeline-badge">&nbsp;</div>
+              <!-- <div class="timeline-badge">&nbsp;</div> -->
             </div>
       
             <!-- Timeline Item 6 -->
@@ -392,18 +464,19 @@
               <div class="flip-card">
                 <a href="https://example.com/service6" target="_blank">
                   <div class="flip-card-inner">
-                    <div class="flip-card-front" style="background-image: url('assets/img/Buisness01.jpg');">
-                        <h2 style="color: #BFCDCD;">Buisness<br> 
-                          <span style="color: #FF9F7C;">Transformation</span>
+                    <div class="flip-card-front" style="background-image: url('assets/img/Buisness06.jpg');">
+                        <h2 style="color: #BFCDCD;background-color: #0000007e; ">Buisness<br> 
+                          <span style="color: #FF9F7C;">IMMUNITY</span>
                          </h2>
                      </div>
                     <div class="flip-card-back">
-                      <p>Description of service 6.</p>
+                      <p>
+                        Business Immunity Services offers comprehensive risk protection solutions, including risk assessment, crisis management, and business continuity planning, to keep your operations secure.</p>
                     </div>
                   </div>
                 </a>
               </div>
-              <div class="timeline-badge">&nbsp;</div>
+              <!-- <div class="timeline-badge">&nbsp;</div> -->
             </div>
       
             <!-- Connecting Line (between badges) -->
@@ -417,18 +490,18 @@
               <div class="flip-card">
                 <a href="https://example.com/service7" target="_blank">
                   <div class="flip-card-inner">
-                    <div class="flip-card-front" style="background-image: url('assets/img/Buisness01.jpg');">
-                        <h2 style="color: #BFCDCD;">Buisness<br> 
-                          <span style="color: #FF9F7C;">Transformation</span>
+                    <div class="flip-card-front" style="background-image: url('assets/img/Buisness07.jpg');">
+                        <h2 style="color: #BFCDCD;background-color: #0000007e; ">Buisness<br> 
+                          <span style="color: #FF9F7C;">SUSTAINABILITY</span>
                          </h2>
                      </div>
                     <div class="flip-card-back">
-                      <p>Description of service 7.</p>
+                      <p>Business sustainability consulting guides companies in adopting eco-friendly practices to enhance efficiency and profitability while reducing environmental impact.</p>
                     </div>
                   </div>
                 </a>
               </div>
-              <div class="timeline-badge">&nbsp;</div>
+              <!-- <div class="timeline-badge">&nbsp;</div> -->
             </div>
       
             <!-- Timeline Item 8 -->
@@ -436,18 +509,18 @@
               <div class="flip-card">
                 <a href="https://example.com/service8" target="_blank">
                   <div class="flip-card-inner">
-                    <div class="flip-card-front" style="background-image: url('assets/img/Buisness01.jpg');">
-                        <h2 style="color: #BFCDCD;">Buisness<br> 
-                          <span style="color: #FF9F7C;">Transformation</span>
+                    <div class="flip-card-front" style="background-image: url('assets/img/Buisness08.jpg');">
+                        <h2 style="color: #BFCDCD;background-color: #0000007e; ">Buisness<br> 
+                          <span style="color: #FF9F7C;">EFFICIENCY</span>
                          </h2>
                      </div>
                     <div class="flip-card-back">
-                      <p>Description of service 8.</p>
+                      <p>LEVENBERT's Financial and Investment Consulting optimizes financial strategies to enhance performance and achieve sustainable growth through cost efficiency and informed investments.</p>
                     </div>
                   </div>
                 </a>
               </div>
-              <div class="timeline-badge">&nbsp;</div>
+              <!-- <div class="timeline-badge">&nbsp;</div> -->
             </div>
       
             <!-- Connecting Line (between badges) -->
