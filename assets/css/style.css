@@ -250,7 +250,7 @@ footer .social-links a:hover {
     display: block;
     line-height: 1;
     padding: 8px 0 8px 15px;
-    border-left: 3px solid color-mix(in srgb, #ef0007, transparent 70%);
+    border-left: 3px solid color-mix(in srgb, #FF9F7C, transparent 70%);
     margin: 20px 0;
     color: color-mix(in srgb, var(--default-color), transparent 20%);
     transition: 0.3s;
@@ -303,7 +303,7 @@ footer .social-links a:hover {
     color: var(--accent-color);
   }
 
-.btn{
+/* .btn{
     border: 3px solid;
     border-color: #ef0007 ;
   border-radius: 50%;
@@ -319,6 +319,6 @@ footer .social-links a:hover {
   border-color: #3d3d3d;
     background-color: #3d3d3d;
     color: #ffffff;
-  }
+  } */
  
 
