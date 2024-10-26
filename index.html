@@ -15,10 +15,8 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@300;400;600&display=swap">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
-  
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
   
     <style>
 
@@ -239,7 +237,33 @@
     }
 
 
-  
+    .news-item {
+        padding: 15px;
+        text-align: center;
+       
+    }
+    .news-item img {
+        width: 100%;
+        height: auto;
+    }
+
+    .slick-center { 
+        transform: scale(0.8); /* Scale the center slide */
+        transition: transform 0.3s ease; 
+    }
+
+      /* Ensure arrows are visible and positioned correctly */
+      .slick-prev, .slick-next {
+        display: block !important;
+        color: #000; /* Adjust color as needed */
+        z-index: 1;
+    }
+
+    /* Optional: style arrows for better visibility */
+    .slick-prev:before, .slick-next:before {
+        font-size: 24px; /* Increase size for visibility */
+        color: #333; /* Change arrow color */
+    }
     
   </style>
 
@@ -539,7 +563,35 @@
   </section>
 
 
+<section class="overlay-dots">
 
+
+  <div class="container my-5">
+    <h2 class="text-center mb-4">Latest News</h2>
+    <div class="news-slider">
+        <div class="news-item">
+            <img src="assets/img/Break001.png" class="img-fluid" alt="News 1">
+            <h5 class="mt-2">Saudi Arabia’s Digital Lead in Education Opens Up Investment Opportunities.</h5>
+            <p>A brief description of the news goes here.</p>
+        </div>
+        <div class="news-item">
+            <img src="assets/img/Break001.png" class="img-fluid" alt="News 2">
+            <h5 class="mt-2">Saudi Arabia's Economy Grows as it Diversifies</h5>
+            <p>A brief description of the news goes here.</p>
+        </div>
+        <div class="news-item">
+            <img src="assets/img/Break001.png" class="img-fluid" alt="News 3">
+            <h5 class="mt-2">Saudi Arabia Witness a New Golden Era of Business Opportunities in the Middle East.</h5>
+            <p>A brief description of the news goes here.</p>
+        </div>
+        <!-- Add more news items as needed -->
+
+        
+    </div>
+</div>
+
+
+</section>
 
 
 
@@ -585,12 +637,13 @@
 
 <!-- Bootstrap 5 JS CDN -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
 <!-- AOS JS CDN -->
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
 <!-- Custom JS -->
 <script src="assets/js/main.js"></script>
 
-<!-- Slick JS -->
+<!-- Slick JavaScript -->
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
 <script>
@@ -600,7 +653,41 @@
     });
 </script>
 
-
+<script>
+  $(document).ready(function(){
+      $('.news-slider').slick({
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true,
+          arrows: true,
+          centerMode: true,
+          centerPadding: '40px', // Increased padding to emphasize center slide
+          autoplay: true,
+          autoplaySpeed:1000,
+          responsive: [
+              {
+                  breakpoint: 1024,
+                  settings: {
+                      slidesToShow: 2,
+                      slidesToScroll: 1,
+                      centerMode: true,
+                      centerPadding: '40px'
+                  }
+              },
+              {
+                  breakpoint: 768,
+                  settings: {
+                      slidesToShow: 1,
+                      slidesToScroll: 1,
+                      centerMode: true,
+                      centerPadding: '0px'
+                  }
+              }
+          ]
+      });
+  });
+</script>
 
 </body>
 </html>
