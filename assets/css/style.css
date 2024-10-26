@@ -29,8 +29,15 @@ section {
 
 /* Navbar Styles */
 .navbar {
-    background-color: #BFCDCD;
+    background-color: #2d435b21; /* Initial transparent background */
     padding: 15px 30px;
+    transition: background-color 0.4s ease; /* Smooth transition for background */
+    z-index: 10;
+}
+
+.navbar.scrolled {
+    background-color: #2D435B; /* Background color after scroll */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
 }
 
 .navbar-brand img {
@@ -46,13 +53,7 @@ section {
     padding-right: 15px;
     text-decoration: none;
     font-size: 1rem;
-    transition: color 0.3s ease-in-out;
-}
-
-.navbar.sticky-top {
-    background-color: #2D435B;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    transition: background-color 1.0s ease-in-out;
+    transition: color 0.3s ease-in-out; /* Smooth color transition for links */
 }
 
 .nav-link:hover {
@@ -169,6 +170,22 @@ footer .social-links a {
 footer .social-links a:hover {
     color: #FF9F7C;
 }
+
+.footer .copyright {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  }
+  
+  .footer .copyright p {
+    margin-bottom: 0;
+  }
+
+
+  .footer .credits {
+    margin-top: 6px;
+    font-size: 13px;
+  }
 
 /* Responsive Styles */
 @media (max-width: 768px) {
