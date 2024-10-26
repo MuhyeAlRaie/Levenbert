@@ -24,7 +24,7 @@ a:hover {
 }
 
 section {
-    padding: 60px 0;
+    /* padding: 60px 0; */
 }
 
 /* Navbar Styles */
@@ -130,7 +130,7 @@ padding: 10px;
 footer {
     background-color: #BFCDCD;
     color: #fff;
-    height: 50vh;
+    height: 75vh;
     padding-top: 50px;
 }
 footer img {
