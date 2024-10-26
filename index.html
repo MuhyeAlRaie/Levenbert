@@ -239,108 +239,7 @@
     }
 
 
-    /* news */
-
-    /* General Section Styling */
-#latest-news {
-    padding: 60px 0;
-    background-color: #f8f9fa;
-}
-
-#latest-news .section-title {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 40px;
-    color: #2D435B;
-}
-
-/* News Card Styles */
-.news-slider {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.news-card {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    margin: 0 15px;
-}
-
-.news-card img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
-    margin-bottom: 15px;
-}
-
-.news-title {
-    font-size: 1.5rem;
-    color: #2D435B;
-    margin-bottom: 10px;
-}
-
-.news-excerpt {
-    font-size: 1rem;
-    color: #666;
-    margin-bottom: 20px;
-}
-
-.read-more {
-    color: #0056b3;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.read-more:hover {
-    color: #FF9F7C;
-    text-decoration: underline;
-}
-
-/* Slick Dots Styling */
-.slick-dots li button:before {
-    color: #FF9F7C; /* Custom color for pagination dots */
-}
-
-.slick-dots li.slick-active button:before {
-    color: #0056b3;
-}
-
-/* Slick Arrows Styling */
-.slick-prev, .slick-next {
-    background-color: #2D435B;
-    color: #fff;
-    padding: 10px;
-    border-radius: 50%;
-    font-size: 1.2rem;
-    transition: background-color 0.3s ease;
-}
-
-.slick-prev:hover, .slick-next:hover {
-    background-color: #FF9F7C;
-}
-
-/* Responsive News Section */
-@media (max-width: 768px) {
-    #latest-news .section-title {
-        font-size: 2rem;
-    }
-
-    .news-card {
-        padding: 15px;
-    }
-
-    .news-title {
-        font-size: 1.2rem;
-    }
-
-    .news-excerpt {
-        font-size: 0.9rem;
-    }
-}
+  
     
   </style>
 
@@ -439,16 +338,16 @@
 
 
 <!-- Break Section  -->
-<section class="break-section" style="background-color: #638181;">
+<!-- <section class="break-section" style="background-color: #638181;">
 <div class="container" >
     <div class="row">
         <div class="col text-start"> 
-            <h2 style="font-size: 3rem;color: #BFCDCD;">Future Transformation Architect Platform.</h2>
+            <h2 style="font-size: 3rem;color: #BFCDCD;">Future Transformation Architect Platform.</h2> -->
             <!-- <p>Your text goes here. This section is responsive and will adjust based on screen size.</p> -->
-        </div>
+        <!-- </div>
     </div>
 </div>
-</section>
+</section> -->
 
 
   <section class="overlay-dots">
@@ -640,36 +539,6 @@
   </section>
 
 
- <!-- Latest News Section -->
-<section id="latest-news" class="news-section">
-  <div class="container">
-      <h2 class="section-title">Latest News</h2>
-      <div class="news-slider">
-          <div class="news-card">
-              <img src="news-image-1.jpg" alt="News 1" class="news-image">
-              <h3 class="news-title">Headline for Latest News 1</h3>
-              <p class="news-excerpt">Brief description or excerpt of the news article goes here...</p>
-              <a href="#" class="read-more">Read More</a>
-          </div>
-
-          <div class="news-card">
-              <img src="news-image-2.jpg" alt="News 2" class="news-image">
-              <h3 class="news-title">Headline for Latest News 2</h3>
-              <p class="news-excerpt">Brief description or excerpt of the news article goes here...</p>
-              <a href="#" class="read-more">Read More</a>
-          </div>
-
-          <div class="news-card">
-              <img src="news-image-3.jpg" alt="News 3" class="news-image">
-              <h3 class="news-title">Headline for Latest News 3</h3>
-              <p class="news-excerpt">Brief description or excerpt of the news article goes here...</p>
-              <a href="#" class="read-more">Read More</a>
-          </div>
-
-          <!-- Add more news cards as needed -->
-      </div>
-  </div>
-</section>
 
 
 
@@ -732,28 +601,7 @@
     });
 </script>
 
-<script>
-  $(document).ready(function(){
-      $('.news-slider').slick({
-          slidesToShow: 3,
-          slidesToScroll: 1,
-          autoplay: true,
-          autoplaySpeed: 1000,  // Slide changes every 3 seconds
-          dots: true,           // Show pagination dots
-          arrows: true,         // Enable next/prev arrows
-          adaptiveHeight: true, // Adjust height based on content
-          responsive: [
-              {
-                  breakpoint: 768,
-                  settings: {
-                      slidesToShow: 1, // Show 1 slide at a time on smaller screens
-                      arrows: false,   // Hide arrows on smaller screens
-                  }
-              }
-          ]
-      });
-  });
-  </script>
+
 
 </body>
 </html>
