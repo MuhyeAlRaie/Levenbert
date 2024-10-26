@@ -15,8 +15,9 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@300;400;600&display=swap">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+   
+    <!-- Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
   
     <style>
 
@@ -139,6 +140,7 @@
       height: 2px;
       background-color: #6c757d;
       z-index: -1;
+      
     }
 
     /* Clickable anchor tag covers the entire card */
@@ -181,92 +183,41 @@
       }
     }
 
- /* Break Section Styles */
- .break-section {
-    background-image: url('./assets/img/Break01BG.jpg'); /* Add your background image path here */
-    background-size: cover; /* Cover the entire section */
-        background-position: center; /* Center the background image */
-        background-repeat: no-repeat;
-        background-color: #638181;
-        padding: 2rem 1rem; /* Padding for better spacing */
-        height: 50vh;
-        width: auto;
-        text-align: center;
-        justify-items: center;
-    }
+ 
+/* neeeeeews */
+    .card {
+    position: relative;
+    overflow: hidden;
+  }
 
-    .container {
-        max-width: 1200px; /* Limit container width for larger screens */
-        margin: 0 auto; /* Center container */
-        justify-items: center;
-    }
+  .read-more-btn {
+  position: absolute;
+  bottom: 15px;
+  right: 15px; /* Move to bottom-right */
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #2D435B;
+  color: #FF9F7C;
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 14px;
+  transition: background-color 0.3s;
+  text-decoration: none;
+  font-weight: bold;
+}
 
-    .row {
-        display: flex;
-        flex-wrap: wrap; /* Allow wrapping of columns */
-        justify-content: center; /* Center content horizontally */
-    }
+.read-more-btn:hover {
+  background-color: #FF9F7C;
+  text-decoration: none;
+color: #BFCDCD;
+}
 
-    .col {
-        flex: 1 1 100%; /* Full width on small screens */
-        text-align: start; /* Align text to start */
-        padding: 0.5rem; /* Padding for spacing */
-        margin: 100px;
-    }
-
-    @media (min-width: 768px) {
-        .col {
-            flex: 1 1 50%; /* 50% width on medium screens */
-        }
-    }
-
-    @media (min-width: 992px) {
-        .col {
-            flex: 1 1 33%; /* 33.33% width on large screens */
-        }
-    }
-
-    h2 {
-        font-size: 1.5rem; /* Responsive font size */
-        margin-bottom: 1rem; /* Space below heading */
-    }
-
-    p {
-        font-size: 1rem; /* Responsive font size */
-        line-height: 1.5; /* Better line spacing */
-    }
-
-
-    .news-item {
-        padding: 15px;
-        text-align: center;
-       
-    }
-    .news-item img {
-        width: 100%;
-        height: auto;
-    }
-
-    .slick-center { 
-        transform: scale(0.8); /* Scale the center slide */
-        transition: transform 0.3s ease; 
-    }
-
-      /* Ensure arrows are visible and positioned correctly */
-      .slick-prev, .slick-next {
-        display: block !important;
-        color: #000; /* Adjust color as needed */
-        z-index: 1;
-    }
-
-    /* Optional: style arrows for better visibility */
-    .slick-prev:before, .slick-next:before {
-        font-size: 24px; /* Increase size for visibility */
-        color: #333; /* Change arrow color */
-    }
-    
-  </style>
-
+  .swiper-container {
+    padding: 20px 0;
+  }
 
 
     </style>
@@ -325,7 +276,7 @@
 
   
     <video autoplay muted loop style="position: absolute; top: 50%; left: 50%; min-width: 100%; min-height: 100%; width: auto; height: auto; z-index: -1; transform: translate(-50%, -50%);filter: grayscale(0.7);">
-        <source src="./assets/videos/videobg01.mp4" type="video/mp4">
+        <source src="./assets/videos/VideoBG01.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
     <div class="container text" style="position: relative; z-index: 1; color: white; text-align: left; display: flex; flex-direction: column; justify-content: center; height: 100%;">
@@ -447,7 +398,7 @@
             </div>
       
             <!-- Connecting Line (between badges) -->
-            <div class="timeline-line"></div>
+            <!-- <div class="timeline-line"></div> -->
           </div>
       
           <!-- Second Row of Cards (3 Cards) -->
@@ -512,7 +463,7 @@
             </div>
       
             <!-- Connecting Line (between badges) -->
-            <div class="timeline-line"></div>
+            <!-- <div class="timeline-line"></div> -->
           </div>
       
           <!-- Third Row of Cards (Remaining 2 Cards) -->
@@ -556,7 +507,7 @@
             </div>
       
             <!-- Connecting Line (between badges) -->
-            <div class="timeline-line"></div>
+            <!-- <div class="timeline-line"></div> -->
           </div>
         </div>
       </div>
@@ -565,30 +516,50 @@
 
 <section class="overlay-dots">
 
-
   <div class="container my-5">
-    <h2 class="text-center mb-4">Latest News</h2>
-    <div class="news-slider">
-        <div class="news-item">
-            <img src="assets/img/Break001.png" class="img-fluid" alt="News 1">
-            <h5 class="mt-2">Saudi Arabia’s Digital Lead in Education Opens Up Investment Opportunities.</h5>
-            <p>A brief description of the news goes here.</p>
+    <h2 class="text-center mb-4" style="color: #2D435B; font-size: 32px;">Latest News</h2>
+    <!-- Swiper -->
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <!-- News Item 1 -->
+        <div class="swiper-slide">
+          <div class="card h-100">
+            <img src="assets/img/news-1.jpg" class="card-img-top" alt="News Image 1">
+            <div class="card-body">
+              <h5 class="card-title">Saudi Arabia's Economy Grows as it Diversifies</h5>
+              <p class="card-text">Brief description of the news article goes here. Keep it short and engaging!</p>
+            </div>
+            <a href="#" class="read-more-btn">...</a>
+          </div>
         </div>
-        <div class="news-item">
-            <img src="assets/img/Break001.png" class="img-fluid" alt="News 2">
-            <h5 class="mt-2">Saudi Arabia's Economy Grows as it Diversifies</h5>
-            <p>A brief description of the news goes here.</p>
-        </div>
-        <div class="news-item">
-            <img src="assets/img/Break001.png" class="img-fluid" alt="News 3">
-            <h5 class="mt-2">Saudi Arabia Witness a New Golden Era of Business Opportunities in the Middle East.</h5>
-            <p>A brief description of the news goes here.</p>
+        <!-- News Item 2 -->
+        <div class="swiper-slide">
+          <div class="card h-100">
+            <img src="assets/img/news-2.jpg" class="card-img-top" alt="News Image 2">
+            <div class="card-body">
+              <h5 class="card-title">Saudi Arabia Witness a New Golden Era of Business Opportunities in the Middle East.</h5>
+              <p class="card-text">Another brief description of this news article, designed to catch readers' attention.</p>
+            </div>
+            <a href="#" class="read-more-btn">...</a>
+          </div>
         </div>
         <!-- Add more news items as needed -->
 
-        
+
+        <div class="swiper-slide">
+          <div class="card h-100">
+            <img src="assets/img/news-3.jpg" class="card-img-top" alt="News Image 2">
+            <div class="card-body">
+              <h5 class="card-title">Saudi Arabia’s Digital Lead in Education Opens Up Investment Opportunities.</h5>
+              <p class="card-text">Another brief description of this news article, designed to catch readers' attention.</p>
+            </div>
+            <a href="#" class="read-more-btn">...</a>
+          </div>
+        </div>
+
+      </div>
     </div>
-</div>
+  </div>
 
 
 </section>
@@ -643,8 +614,7 @@
 <!-- Custom JS -->
 <script src="assets/js/main.js"></script>
 
-<!-- Slick JavaScript -->
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
 
 <script>
     AOS.init({
@@ -653,39 +623,39 @@
     });
 </script>
 
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
 <script>
-  $(document).ready(function(){
-      $('.news-slider').slick({
-          slidesToShow: 3,
-          slidesToScroll: 1,
-          infinite: true,
-          dots: true,
-          arrows: true,
-          centerMode: true,
-          centerPadding: '40px', // Increased padding to emphasize center slide
-          autoplay: true,
-          autoplaySpeed:1000,
-          responsive: [
-              {
-                  breakpoint: 1024,
-                  settings: {
-                      slidesToShow: 2,
-                      slidesToScroll: 1,
-                      centerMode: true,
-                      centerPadding: '40px'
-                  }
-              },
-              {
-                  breakpoint: 768,
-                  settings: {
-                      slidesToShow: 1,
-                      slidesToScroll: 1,
-                      centerMode: true,
-                      centerPadding: '0px'
-                  }
-              }
-          ]
-      });
+  const swiper = new Swiper('.swiper-container', {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    loop: true,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+      430: {  // Small screens
+        slidesPerView: 1,
+      },
+      576: {  // Small screens
+        slidesPerView: 1,
+      },
+      768: {  // Medium screens
+        slidesPerView: 2,
+      },
+      992: {  // Large screens
+        slidesPerView: 3,
+      },
+      1200: { // Extra large screens
+        slidesPerView: 4,
+      }
+    }
   });
 </script>
 
