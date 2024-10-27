@@ -320,6 +320,29 @@ color: #BFCDCD;
       }
     }
 
+/* counter */
+
+.fact-counter {
+  background-color: #f8f9fa;
+}
+
+.section-title {
+  font-weight: bold;
+  font-size: 2rem;
+  color: #2D435B;
+}
+
+.fact-item .counter {
+  color: #2D435B; /* Adjust color as needed */
+  font-weight: bold;
+}
+
+.fact-item p {
+  color: #FF9F7C; /* Adjust color as needed */
+  margin: 0;
+}
+    
+
     </style>
 </head>
 <body>
@@ -416,6 +439,58 @@ color: #BFCDCD;
  <section class="break-section" style="background-image: url('./assets/img/Break01.jpg');">
   <h1>Empower your business to thrive in the future with<br> a transformative platform that turns strategy into success.</h1>
 </section>
+
+
+<!-- Fact Counter Section -->
+<section class="fact-counter py-5">
+  <div class="container">
+    <div class="row">
+      <!-- Left Column (Title) -->
+      <div class="col-lg-4" data-aos="fade-right">
+        <h2 class="section-title">Our<br> Achievements</h2>
+      </div>
+      
+      <!-- Right Column (Counter Grid) -->
+      <div class="col-lg-8">
+        <div class="row">
+          <!-- Fact Counter 1 -->
+          <div class="col-md-6 col-lg-6 mb-4" data-aos="fade-up">
+            <div class="fact-item text-center border-bottom pb-3">
+              <h3 class="counter display-4" data-target="150">0</h3>
+              <p>Projects Completed</p>
+            </div>
+          </div>
+
+          <!-- Fact Counter 2 -->
+          <div class="col-md-6 col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="fact-item text-center border-bottom pb-3">
+              <h3 class="counter display-4" data-target="300">0</h3>
+              <p>Happy Clients</p>
+            </div>
+          </div>
+
+          <!-- Fact Counter 3 -->
+          <div class="col-md-6 col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="fact-item text-center border-bottom pb-3">
+              <h3 class="counter display-4" data-target="50">0</h3>
+              <p>Awards Won</p>
+            </div>
+          </div>
+
+          <!-- Fact Counter 4 -->
+          <div class="col-md-6 col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="fact-item text-center border-bottom pb-3">
+              <h3 class="counter display-4" data-target="25">0</h3>
+              <p>Countries Served</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 
   <section class="overlay-dots">
 
@@ -742,10 +817,11 @@ color: #BFCDCD;
 
 
 <script>
-    AOS.init({
-        duration: 1800, // Animation duration in milliseconds
-        once: false, // Whether animation should happen only once
-    });
+   AOS.init({
+  duration: 1000, // Animation duration in milliseconds
+  easing: 'ease-in-out',
+  once: true, // Animation happens only once when scrolling
+});
 </script>
 
 <!-- Swiper JS -->
@@ -785,6 +861,42 @@ color: #BFCDCD;
       }
     }
   });
+</script>
+
+<script>
+
+document.addEventListener("DOMContentLoaded", () => {
+  const counters = document.querySelectorAll(".counter");
+  
+  counters.forEach(counter => {
+    const updateCounter = () => {
+      const target = +counter.getAttribute("data-target");
+      const count = +counter.innerText;
+      const increment = target / 100; // Adjust the speed of the counter
+
+      if (count < target) {
+        counter.innerText = `${Math.ceil(count + increment)}`;
+        setTimeout(updateCounter, 20); // Adjust delay for animation smoothness
+      } else {
+        counter.innerText = target;
+      }
+    };
+    
+    // Trigger the animation when the element is scrolled into view
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          updateCounter();
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    observer.observe(counter);
+  });
+});
+
+
 </script>
 
 </body>
