@@ -219,6 +219,106 @@ color: #BFCDCD;
     padding: 20px 0;
   }
 
+/* career */
+
+
+ /* Custom styles for the section */
+ .career-section {
+            padding: 60px 20px;
+            background-color: #fff;
+        }
+        .career-title {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #2D435B;
+        }
+        .career-paragraph {
+            font-size: 1.1rem;
+            color: #666;
+        }
+        .apply-btn {
+            display: inline-block;
+            padding: 35px 30px;
+            border-radius: 50%;
+            background-color: #2D435B;
+            color: #fff;
+            font-weight: bold;
+            text-decoration: none;
+            height: 100px;
+            width: 100px;
+            text-align: center;
+            
+            
+        }
+
+        .apply-btn:hover {
+            display: inline-block;
+            padding: 30px 30px;
+            border-radius: 50%;
+            background-color: #FF9F7C;
+            color: #fff;
+            font-weight: bold;
+            text-decoration: none;
+            height: 100px;
+            width: 100px;
+            text-align: center;
+            transition: ease-in 0.3s;
+            
+           
+        }
+
+
+        /* break section */
+        .break-section {
+      position: relative;
+      height: 400px;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+    }
+    
+     /* Overlay */
+     .break-section::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
+      z-index: 1; /* Places the overlay behind the text */
+    
+    }
+    
+    .break-section h1 {
+      text-align: left;
+      font-size: 2rem;
+      font-weight: bold;
+      position: relative; /* Keep text above overlay */
+      z-index: 2; /* Places text above overlay */
+      padding-left: 50px;
+    }
+    
+    @media (max-width: 768px) {
+      .break-section {
+        height: 300px;
+      }
+      .break-section h1 {
+        font-size: 1.8rem;
+      }
+    }
+    
+    @media (max-width: 576px) {
+      .break-section {
+        height: 250px;
+      }
+      .break-section h1 {
+        font-size: 1.5rem;
+      }
+    }
 
     </style>
 </head>
@@ -312,18 +412,10 @@ color: #BFCDCD;
   </section>
 
 
-<!-- Break Section  -->
-<!-- <section class="break-section" style="background-color: #638181;">
-<div class="container" >
-    <div class="row">
-        <div class="col text-start"> 
-            <h2 style="font-size: 3rem;color: #BFCDCD;">Future Transformation Architect Platform.</h2> -->
-            <!-- <p>Your text goes here. This section is responsive and will adjust based on screen size.</p> -->
-        <!-- </div>
-    </div>
-</div>
-</section> -->
-
+ <!-- Editable Background Image URL in style attribute -->
+ <section class="break-section" style="background-image: url('./assets/img/Break01.jpg');">
+  <h1>Empower your business to thrive in the future with<br> a transformative platform that turns strategy into success.</h1>
+</section>
 
   <section class="overlay-dots">
 
@@ -342,7 +434,7 @@ color: #BFCDCD;
                 <a href="./Business-Transformation" target="_blank"> <!-- Clickable card -->
                   <div class="flip-card-inner">
                     <div class="flip-card-front" style="background-image: url('assets/img/Buisness01.jpg');">
-                      <h2 style="color: #BFCDCD; background-color: #0000007e; ">Buisness<br> 
+                      <h2 style="color: #BFCDCD;  ">Buisness<br> 
                      <span style="color: #FF9F7C;">TRANSFORMATION</span>
 
                     </h2>
@@ -364,7 +456,7 @@ color: #BFCDCD;
                 <a href="./Business-Empowerment" target="_blank">
                   <div class="flip-card-inner">
                     <div class="flip-card-front" style="background-image: url('assets/img/Buisness02.jpg');">
-                        <h2 style="color: #BFCDCD; background-color: #0000007e; " >Buisness<br> 
+                        <h2 style="color: #BFCDCD;  " >Buisness<br> 
                           <span style="color: #FF9F7C;">EMPOWERMENT</span>
                          </h2>
                      </div>
@@ -384,7 +476,7 @@ color: #BFCDCD;
                 <a href="./Business-Excellence" target="_blank">
                   <div class="flip-card-inner">
                     <div class="flip-card-front" style="background-image: url('assets/img/Buisness03.jpg');">
-                        <h2 style="color: #BFCDCD;background-color: #0000007e; ">Buisness<br> 
+                        <h2 style="color: #BFCDCD; ">Buisness<br> 
                           <span style="color: #FF9F7C;">EXCELLENCE</span>
                          </h2>
                      </div>
@@ -409,7 +501,7 @@ color: #BFCDCD;
                 <a href="./Business-Agility" target="_blank">
                   <div class="flip-card-inner">
                     <div class="flip-card-front" style="background-image: url('assets/img/Buisness04.jpg');">
-                        <h2 style="color: #BFCDCD;background-color: #0000007e; ">Buisness<br> 
+                        <h2 style="color: #BFCDCD; ">Buisness<br> 
                           <span style="color: #FF9F7C;">AGILITY</span>
                          </h2>
                      </div>
@@ -429,7 +521,7 @@ color: #BFCDCD;
                 <a href="./Business-Intelligence" target="_blank">
                   <div class="flip-card-inner">
                     <div class="flip-card-front" style="background-image: url('assets/img/Buisness05.jpg');">
-                        <h2 style="color: #BFCDCD; background-color: #0000007e; ">Buisness<br> 
+                        <h2 style="color: #BFCDCD;  ">Buisness<br> 
                           <span style="color: #FF9F7C;">INTELLIGENCE</span>
                          </h2>
                      </div>
@@ -448,7 +540,7 @@ color: #BFCDCD;
                 <a href="./Business-Immunity" target="_blank">
                   <div class="flip-card-inner">
                     <div class="flip-card-front" style="background-image: url('assets/img/Buisness06.jpg');">
-                        <h2 style="color: #BFCDCD;background-color: #0000007e; ">Buisness<br> 
+                        <h2 style="color: #BFCDCD; ">Buisness<br> 
                           <span style="color: #FF9F7C;">IMMUNITY</span>
                          </h2>
                      </div>
@@ -474,7 +566,7 @@ color: #BFCDCD;
                 <a href="./Business-Sustainability" target="_blank">
                   <div class="flip-card-inner">
                     <div class="flip-card-front" style="background-image: url('assets/img/Buisness07.jpg');">
-                        <h2 style="color: #BFCDCD;background-color: #0000007e; ">Buisness<br> 
+                        <h2 style="color: #BFCDCD; ">Buisness<br> 
                           <span style="color: #FF9F7C;">SUSTAINABILITY</span>
                          </h2>
                      </div>
@@ -493,7 +585,7 @@ color: #BFCDCD;
                 <a href="./Business-Efficency" target="_blank">
                   <div class="flip-card-inner">
                     <div class="flip-card-front" style="background-image: url('assets/img/Buisness08.jpg');">
-                        <h2 style="color: #BFCDCD;background-color: #0000007e; ">Buisness<br> 
+                        <h2 style="color: #BFCDCD; ">Buisness<br> 
                           <span style="color: #FF9F7C;">EFFICIENCY</span>
                          </h2>
                      </div>
@@ -512,6 +604,12 @@ color: #BFCDCD;
         </div>
       </div>
   </section>
+
+
+   <!-- Editable Background Image URL in style attribute -->
+ <section class="break-section" style="background-image: url('./assets/img/Break02.jpg');">
+  <h1>Shaping the Future of Architecture</h1>
+</section>
 
 
 <section class="overlay-dots">
@@ -564,6 +662,33 @@ color: #BFCDCD;
 
 </section>
 
+ <!-- Editable Background Image URL in style attribute -->
+ <section class="break-section" style="background-image: url('./assets/img/Break01.jpg');">
+  <h1>Shaping the Future of Architecture</h1>
+</section>
+
+<div class="container career-section">
+  <h2 class="text-center mb-4" style="color: #2D435B; font-size: 32px;">Career</h2>
+
+  <div class="row align-items-center">
+      <!-- Left Column: Title, Paragraph, Apply Button -->
+    <div class="col-md-6">
+          <img src="assets/img/career.png" alt="Career Image" class="img-fluid rounded">
+      </div>
+
+      <!-- Right Column: Image -->
+      
+  <div class="col-md-6 text-center text-md-start mb-4 mb-md-0">
+          <h2 class="career-title">Join Our Distinguished Team<span style="font-size: 5rem; color: #FF9F7C;">.</span></h2>
+          <p class="career-paragraph">
+              We are looking for talented individuals to join our team. Explore our career opportunities and apply to
+              be part of our journey. Your skills and enthusiasm can make a real impact.
+          </p>
+          <a href="#" class="apply-btn">Apply</a>
+      </div>
+
+  </div>
+</div>
 
 
 <!-- Footer -->
@@ -635,6 +760,9 @@ color: #BFCDCD;
       el: '.swiper-pagination',
       clickable: true,
     },
+    autoplay: {
+   delay: 1500,
+ },
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
